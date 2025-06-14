@@ -31,6 +31,11 @@ const router = createRouter({
       path: '/withdraw',
       name: 'withdraw',
       component: () => import('../views/withdraw/index.vue')
+    },
+    {
+      path: '/flashExchange',
+      name: 'flashExchange',
+      component: () => import('../views/flashExchange/index.vue')
     }
     // {
     //   path: '/forget',

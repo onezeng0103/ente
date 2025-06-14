@@ -20,7 +20,12 @@
                 </li>
                 <li class="withdraw-currency">
                   <el-form-item label="币种" prop="coinType">
-                    <el-select v-model="form.coinType" placeholder="请选择" @change="handleChange">
+                    <el-select
+                      popper-class="withdraw-currency-popper"
+                      v-model="form.coinType"
+                      placeholder="请选择"
+                      @change="handleChange"
+                    >
                       <el-option
                         v-for="item in list"
                         :value="item.title"
@@ -31,7 +36,11 @@
                 </li>
                 <li class="withdraw-address">
                   <el-form-item label="地址" prop="address">
-                    <el-select v-model="form.address" placeholder="请选择">
+                    <el-select
+                      popper-class="withdraw-currency-popper"
+                      v-model="form.address"
+                      placeholder="请选择"
+                    >
                       <el-option
                         v-for="item in addressList"
                         :value="item.address"
@@ -320,6 +329,13 @@ onMounted(() => {
 </script>
 <style lang="scss" scoped>
 @import './index.css';
+:deep(.el-select-dropdown) {
+  top: -10px !important;
+  margin: 0 !important;
+  border-radius: 0.16rem !important;
+  border: 0.5px solid #858586 !important;
+  background-color: #242731 !important;
+}
 :deep(.el-form-item__label) {
   vertical-align: middle;
   font-size: 0.32rem;

@@ -10,21 +10,26 @@
 .is-pure {
   border: none !important;
 }
-.el-select-dropdown {
+.withdraw-currency-popper {
   top: -10px;
   margin: 0;
   border-radius: 0.16rem !important;
   border: 0.5px solid #858586 !important;
   background-color: #242731;
 }
-.el-select-dropdown__item {
+.withdraw-currency-popper .el-select-dropdown__item {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.16rem;
 }
-.el-select-dropdown__item.is-hovering {
+.withdraw-currency-popper .el-select-dropdown__item.is-hovering {
   background-color: #31353d !important;
   color: #c4c4c4 !important;
+}
+.conversion-box {
+  top: 0px;
+  margin: 0;
+  border-radius: 0.107rem !important;
 }

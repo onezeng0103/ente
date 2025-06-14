@@ -96,7 +96,7 @@
                       <i class="iconfont icon-tixian"></i>
                       提现
                     </li>
-                    <li>
+                    <li @click="router.push('/flashExchange')">
                       <i class="iconfont icon-shandui"></i>
                       闪兑
                     </li>
