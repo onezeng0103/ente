@@ -32,8 +32,11 @@
                 <div class="mobile-solid">
                   <i class="iconfont icon-a-tongzhi1 item-icon"></i>
                 </div>
-                <div class="mobile-button">
-                  <i class="el-icon-s-fold item-icon"></i>
+                <div class="mobile-button" @click="emit('setDrawer',!props.drawer)">
+                  <i
+                    class="el-icon-s-fold item-icon"
+                    :class="{ 'el-icon-s-fold': !props.drawer, 'el-icon-close': props.drawer }"
+                  ></i>
                 </div>
               </div>
             </div>
@@ -41,8 +44,18 @@
         </div>
       </div>
     </header>
+<!--    <Drawer :drawer="drawer"></Drawer>-->
+<!--      <el-drawer v-model="drawer" title="I am the title" :with-header="false">-->
+<!--        <span>Hi there!</span>-->
+<!--      </el-drawer>-->
   </div>
+
 </template>
 <script setup>
+const emit = defineEmits(['setDrawer'])
+const props = defineProps({
+  drawer: Boolean
+})
+
 const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
 </script>
