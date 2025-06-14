@@ -1,0 +1,77 @@
+import { createRouter, createWebHashHistory } from 'vue-router'
+import { useUserStore } from '@/store/user/index'
+import { signUp } from '@/api/user'
+import { dispatchCustomEvent } from '@/utils'
+import { noLoginRouterList } from './whiteList'
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('../views/home/index.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/login/index.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/register/index.vue')
+    },
+    {
+      path: '/recharge',
+      name: 'recharge',
+      component: () => import('../views/recharge/index.vue')
+    }
+    // {
+    //   path: '/forget',
+    //   name: 'forget',
+    //   component: () => import('../views/forget/index.vue')
+    // },
+  ]
+})
+router.beforeEach(async (to, from, next) => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+  const userStore = useUserStore()
+  if (userStore.isSign) {
+    // 已登录
+    await userStore.getUserInfo()
+    if (to.path.indexOf('/i&') > -1) {
+      next({ path: '/', replace: true })
+    } else {
+      next()
+    }
+  } else {
+    if (!noLoginRouterList.includes(to.path)) {
+      next('/login')
+    } else {
+      next()
+    }
+
+    try {
+      const singUpRes = await signUp(params)
+      if (singUpRes.code == 200 && singUpRes.data.satoken) {
+        // 登录成功
+        dispatchCustomEvent('event_toastChange', { name: 'login_success' })
+        let token = singUpRes.data.satoken
+        userStore.setIsSign(true)
+        userStore.setToken(token)
+        userStore.getUserInfo()
+        next('/')
+      } else {
+        showToast(singUpRes.msg)
+      }
+      next()
+    } catch (error) {
+      next()
+    }
+  }
+})
+export default router

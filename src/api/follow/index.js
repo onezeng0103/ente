@@ -1,0 +1,17 @@
+import { post, get } from '@/utils/request'
+
+export const getTradeList = (params) => get(`/api/follow/traderList?${params}`)
+export const getTradeInfo = (id) => get(`/api/follow/traderInfo/${id}`)
+export const getTraderOrder = (id) => get(`/api/follow/traderOrder/${id}`)
+export const postAddTraderUser = (data) => post(`/api/follow/addTraderUser`, data)
+export const getTraderProfitApi = (id) => get(`/api/follow/traderProfit/${id}`)
+export const postMineTraderApi = () => post(`/api/follow/mineTrader`)
+export const getMineProfitApi = () => get(`/api/follow/mineProfit`)
+export const getMineOrderApi = (params) => get(`/api/follow/mineOrder?${params}`)
+export const getMineTraderUserApi = () => get(`/api/follow/mineTraderUser`)
+export const getMineTraderProfitApi = () => get(`/api/follow/mineTraderProfit`)
+export const postUpdateTraderApi = (data) => post(`/api/follow/updateTrader`, data)
+export const postEditTraderUser = (data) => post('/api/follow/editTraderUser', data)
+export const postApplyTrader = (data) => post('/api/follow/applyTrader', data)
+export const postDelTraderUserApi = (data) => post('/api/follow/delTraderUser', data)
+export const getChildListApi = () => post('/api/user/getChildList')
