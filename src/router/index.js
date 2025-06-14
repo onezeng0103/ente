@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/recharge/index.vue')
     },
     {
+      path: '/cashflow',
+      name: 'cashflow',
+      component: () => import('../views/cashflow/index.vue')
+    },
+    {
       path: '/withdraw',
       name: 'withdraw',
       component: () => import('../views/withdraw/index.vue')

@@ -1,0 +1,213 @@
+.bar {
+    --title: #1d1d1d;
+    --bg: #fff;
+}
+
+.is_dark .bar {
+    --title: #f7f7f7;
+    --bg: #161a1e;
+}
+
+.van-nav-bar {
+    background-color: var(--bg);
+    margin-bottom: 0.667rem;
+}
+
+.van-nav-bar:after {
+    border: none !important;
+}
+
+.van-nav-bar .van-nav-bar__content {
+    height: 50px;
+}
+
+.van-nav-bar .van-nav-bar__left,
+.van-nav-bar .van-nav-bar__title {
+    color: #f7f7f7;
+}
+
+.van-nav-bar .van-nav-bar__left .iconfont {
+    font-size: 0.533rem;
+    vertical-align: middle;
+}
+
+.van-nav-bar .van-nav-bar__right {
+    color: #f7f7f7;
+}
+
+.bill,
+.is_dark .bill {
+    --bg: #f4f6f8;
+    --card: #fff;
+    --font: #5f6870;
+    --lifont: #fff;
+    --span: #222;
+}
+
+.bill {
+    min-height: 100vh;
+    background-color: var(--bg);
+    padding: 0 0.133rem;
+}
+
+.bill .card-list {
+    margin: 0.133rem 0;
+    border: 0;
+    background-color: var(--card);
+    border-radius: 0.16rem;
+    -webkit-box-shadow: 0 0.013rem 0.013rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.013rem 0.013rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.bill .card-list .card-list-subset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.bill .card-list .card-list-subset .card-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 0.32rem;
+    font-weight: 400;
+    line-height: 0.747rem;
+    color: var(--lifont);
+}
+
+.bill .card-list .card-list-subset .card-item span {
+    color: var(--span);
+}
+
+.bill .card-list .card-list-subset .card-item .money {
+    color: #00d588;
+}
+
+.bill .card-list .card-list-subset .card-item .withdrawal {
+    color: #ff5733;
+}
+
+.bill .card-list .card-list-subset .card-item .reject {
+    color: #fd5262;
+}
+
+.bill .card-list .card-list-subset .flow {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-top: 0.2rem;
+}
+
+.bill .card-list .card-list-subset .flow div {
+    width: 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.bill .card-list .card-list-subset .flow div span {
+    width: 0.52rem;
+    height: 0.52rem;
+    z-index: 2;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 0.52rem;
+    background-color: #f4f4f4;
+    font-size: 0.293rem;
+    font-weight: 400;
+    text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.bill .card-list .card-list-subset .flow div .active-icon {
+    color: #000;
+    font-size: 0.293rem;
+    font-weight: 500;
+    background-color: #21dc4c;
+}
+
+.bill .card-list .card-list-subset .flow div p {
+    font-size: 0.347rem;
+    font-weight: 400;
+    color: #919191;
+    text-align: center;
+    margin: 0.267rem 0;
+}
+
+.bill .card-list .card-list-subset .flow div .active-font {
+    color: #000;
+}
+
+.bill .card-list .card-list-subset .flow .schedule {
+    background-color: #21dc4c;
+}
+
+.bill .card-list .card-list-subset .flow .schedule,
+.bill .card-list .card-list-subset .flow:before {
+    position: absolute;
+    top: 0.267rem;
+    left: 11%;
+    height: 0.027rem;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bill .card-list .card-list-subset .flow:before {
+    content: '';
+    width: 78%;
+    background-color: #d9d9d9;
+}
+
+.exclamation-point {
+    font-size: 0.467rem;
+    color: #f56c6c;
+    vertical-align: middle;
+}
+
+.title-card {
+    border: 0;
+    background-color: var(--card);
+    margin-top: 0.133rem;
+    border-radius: 0.16rem;
+    -webkit-box-shadow: 0 0.013rem 0.013rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.013rem 0.013rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.title-card .el-card__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.title-card .el-card__body span {
+    display: block;
+    font-size: 0.373rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.493rem;
+    color: var(--font);
+}
+
+.title-card .el-card__body .isactive {
+    color: #000;
+}

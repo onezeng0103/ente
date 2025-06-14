@@ -1,10 +1,11 @@
 <template>
   <div class="layout">
     <PcTop v-if="!isH5 && isPcTopShow" />
-    <H5Top v-if="isH5 && isH5TopShow" />
+    <H5Top v-if="isH5 && !isH5TopShow" :drawer="drawer" @setDrawer="setDrawer" />
     <router-view></router-view>
     <PcFooter v-if="!isH5 && !isPcFooterShow" />
     <H5Footer v-if="isH5 && !isH5FooterShow" />
+    <Drawer v-if="isH5" :drawer="drawer"></Drawer>
   </div>
 </template>
 <script setup>
@@ -14,6 +15,13 @@ import PcTop from '@/component/pc/topBar.vue'
 import H5Top from '@/component/h5/topBar.vue'
 import PcFooter from '@/component/pc/footerBar.vue'
 import H5Footer from '@/component/h5/footerBar.vue'
+import Drawer from '@/component/h5/drawer.vue'
+
+const drawer = ref(false)
+const setDrawer = (value) => {
+  drawer.value = value
+}
+
 const mainStore = useMainStore()
 const route = useRoute()
 const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
@@ -30,10 +38,11 @@ const isPcFooterShow = computed(() => {
   return list.includes(route.path)
 })
 const isH5TopShow = computed(() => {
-  return true
+  const list = ['/recharge','/cashflow']
+  return list.includes(route.path)
 })
 const isH5FooterShow = computed(() => {
-  const list = ['/login', '/register']
+  const list = ['/login', '/register', '/recharge','/cashflow']
   return list.includes(route.path)
 })
 
