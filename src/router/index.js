@@ -41,6 +41,11 @@ const router = createRouter({
       path: '/exchange',
       name: 'exchange',
       component: () => import('../views/exchange/index.vue')
+    },
+    {
+      path: '/invaite',
+      name: 'invaite',
+      component: () => import('../views/invaite/index.vue')
     }
     // {
     //   path: '/forget',

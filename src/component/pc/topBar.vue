@@ -100,7 +100,7 @@
                       <i class="iconfont icon-shandui"></i>
                       闪兑
                     </li>
-                    <li>
+                    <li @click="router.push('/exchange')">
                       <i class="iconfont icon-huazhuan"></i>
                       划转
                     </li>
