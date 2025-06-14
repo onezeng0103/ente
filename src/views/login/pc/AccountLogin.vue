@@ -123,32 +123,26 @@ const handleSubmit = throttle(async () => {
         code: ruleForm.value.code,
         loginPassword: ruleForm.value.loginPassword,
         signType: 3
+      }).then((res) => {
+        if (res.code == '200' && res.data.satoken) {
+          ElNotification({
+            title: '登录成功',
+            type: 'success'
+          })
+          let token = res.data.satoken
+          userStore.setIsSign(true)
+          userStore.setToken(token)
+          setTimeout(() => {
+            router.replace('/')
+            userStore.getUserInfo()
+          }, 500)
+        } else {
+          ElNotification({
+            title: res.msg,
+            type: 'error'
+          })
+        }
       })
-        .then((res) => {
-          if (res.code == '200' && res.data.satoken) {
-            ElNotification({
-              title: '登录成功',
-              type: 'success',
-              duration: 3000
-            })
-            let token = res.data.satoken
-            userStore.setIsSign(true)
-            userStore.setToken(token)
-            setTimeout(() => {
-              router.replace('/')
-              userStore.getUserInfo()
-            }, 500)
-          } else {
-            ElNotification({
-              title: res.msg,
-              type: 'error',
-              duration: 3000
-            })
-          }
-        })
-        .catch((err) => {
-          console.log(err)
-        })
     }
   })
 }, 3000)
@@ -156,7 +150,6 @@ const register = () => {
   router.push('/register')
 }
 const forget = () => {
-  console.log(123)
   router.push('/forget')
 }
 </script>

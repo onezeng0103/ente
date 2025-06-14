@@ -18,6 +18,7 @@ import { _initCoinWebSocket } from '@/plugin/socket/index.js'
 import { Dialog } from 'vant'
 import { useMainStore } from '@/store/index.js'
 import 'animate.css'
+import loadingDirective from '@/directives/checkLoading'
 
 /**
  * 初始化socket
@@ -33,6 +34,7 @@ app.use(Vant)
 app.use(ConfigProvider)
 app.use(Icon)
 app.use(Dialog)
+app.directive('checkLoading', loadingDirective) // 注册为全局指令
 document.addEventListener(
   'touchstart',
   function (event) {

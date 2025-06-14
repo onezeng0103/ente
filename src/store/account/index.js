@@ -38,11 +38,9 @@ export const useAccountStore = defineStore('account', () => {
       if (item.symbol == 'usdt') {
         obj['coin'] = 'usdt'
         obj['icon'] = item.logo?.trim()
-        // console.log('用户USDT',item)
         list.unshift(obj)
       } else {
         obj['coin'] = item.symbol?.replace('usdt', '').trim()
-        // obj['icon'] = item.symbol?.replace('usdt', '').trim()
         obj['icon'] = item.logo?.trim()
         list.push(obj)
       }

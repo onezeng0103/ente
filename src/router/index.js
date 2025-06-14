@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/recharge',
       name: 'recharge',
       component: () => import('../views/recharge/index.vue')
+    },
+    {
+      path: '/withdraw',
+      name: 'withdraw',
+      component: () => import('../views/withdraw/index.vue')
     }
     // {
     //   path: '/forget',

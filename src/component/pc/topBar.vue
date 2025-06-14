@@ -92,7 +92,7 @@
                       <i class="iconfont icon-a-chongzhi1"></i>
                       充币
                     </li>
-                    <li>
+                    <li @click="router.push('/withdraw')">
                       <i class="iconfont icon-tixian"></i>
                       提现
                     </li>

@@ -45,7 +45,6 @@ const mainStore = useMainStore()
 const currentIndex = ref(0)
 const tabList = computed(() => {
   let list = []
-  console.log(mainStore.getLoginMethodList)
   if (mainStore.getLoginMethodList.ordinaryIsOpen) {
     let obj = {}
     obj['id'] = 1

@@ -160,7 +160,6 @@ const qrCodes = ref({
   apple: ''
 })
 
-console.log('downLoadList', downLoadList.value)
 onMounted(async () => {
   qrCodes.value.android = await createQRImage(downLoadList.value.android)
   qrCodes.value.apple = await createQRImage(downLoadList.value.apple)

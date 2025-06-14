@@ -50,7 +50,6 @@ provide('isH5', isH5)
  * 客服点击监听
  */
 const event_serviceChange = () => {
-  console.log(mainStore.getCustomerServiceList)
   if (mainStore.getCustomerServiceList.length) {
     if (mainStore.getCustomerServiceList.length == 1) {
       let href = mainStore.getCustomerServiceList[0]?.url

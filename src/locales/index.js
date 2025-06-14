@@ -54,7 +54,6 @@ export function setI18nLanguage(i18n, locale) {
  * 根据配置获取语言文件
  */
 export const loadLocaleMessages = async (i18n, locale = '') => {
-  console.log('loadLocaleMessages', locale)
   const globs = import.meta.glob('./lang/*.json')
   const messagesFn = globs[`./lang/${locale}.json`]
   const messages = messagesFn ? await messagesFn() : await import(`./lang/en.json`)

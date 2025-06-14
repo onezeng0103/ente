@@ -8,7 +8,6 @@ export let _coinWebSocket = null
  */
 export const _initCoinWebSocket = () => {
   if (!_coinWebSocket) {
-    console.log('初始化 CoinWebSocket')
     _coinWebSocket = new CoinWebSocket()
   }
 }

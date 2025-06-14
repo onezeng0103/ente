@@ -260,14 +260,10 @@ export const useMainStore = defineStore('main', {
      * 获取 平台配置文件
      */
     async getPlatFormConfig() {
-      try {
-        const res = await getPlatFormConfigApi()
-        const dynamicCode = res.data
-        const dynamicFunction = new Function(dynamicCode)
-        this.platFormConfig = dynamicFunction()
-      } catch (error) {
-        console.log(error)
-      }
+      const res = await getPlatFormConfigApi()
+      const dynamicCode = res.data
+      const dynamicFunction = new Function(dynamicCode)
+      this.platFormConfig = dynamicFunction()
     },
     setLanguage(language) {
       if (this.language != language) {

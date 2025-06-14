@@ -124,8 +124,7 @@ const getCode = debounce(() => {
   if (!ruleForm.value.email) {
     ElNotification({
       title: '请输入邮箱',
-      type: 'error',
-      duration: 3000
+      type: 'error'
     })
     return
   }
@@ -133,16 +132,14 @@ const getCode = debounce(() => {
     if (res.code == '200') {
       ElNotification({
         title: res.msg,
-        type: 'success',
-        duration: 3000
+        type: 'success'
       })
       flag.value = true
       time.value = 60 * 1000
     } else {
       ElNotification({
         title: res.msg,
-        type: 'error',
-        duration: 3000
+        type: 'error'
       })
     }
   })
@@ -155,32 +152,26 @@ const handleSubmit = throttle(async () => {
         loginPassword: ruleForm.value.loginPassword,
         signType: 1,
         code: ruleForm.value.code
+      }).then((res) => {
+        if (res.code == '200' && res.data.satoken) {
+          ElNotification({
+            title: '登录成功',
+            type: 'success'
+          })
+          let token = res.data.satoken
+          userStore.setIsSign(true)
+          userStore.setToken(token)
+          setTimeout(() => {
+            router.replace('/')
+            userStore.getUserInfo()
+          }, 500)
+        } else {
+          ElNotification({
+            title: res.msg,
+            type: 'error'
+          })
+        }
       })
-        .then((res) => {
-          if (res.code == '200' && res.data.satoken) {
-            ElNotification({
-              title: '登录成功',
-              type: 'success',
-              duration: 3000
-            })
-            let token = res.data.satoken
-            userStore.setIsSign(true)
-            userStore.setToken(token)
-            setTimeout(() => {
-              router.replace('/')
-              userStore.getUserInfo()
-            }, 500)
-          } else {
-            ElNotification({
-              title: res.msg,
-              type: 'error',
-              duration: 3000
-            })
-          }
-        })
-        .catch((err) => {
-          console.log(err)
-        })
     }
   })
 }, 3000)

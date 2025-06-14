@@ -1,6 +1,6 @@
 <template>
   <div class="h-50px" style="height: 50px"></div>
-  <div class="router-container">
+  <div class="router-container" v-checkLoading="checkLoading">
     <div class="recharge">
       <div class="recharge">
         <div class="recharge-header">
@@ -16,7 +16,7 @@
                           <el-col :span="24">
                             <el-form-item label="币种">
                               <template #default>
-                                <div class="Currency-item" @click="handleCenterDialogVisible">
+                                <div class="Currency-item" @click="handleCenterDialogVisible(1)">
                                   <div class="prefix-item">选择币种</div>
                                   <div class="suffix-item">
                                     {{ info.title }}
@@ -29,7 +29,7 @@
                           <el-col :span="24">
                             <el-form-item label="选择转账网络">
                               <template #default>
-                                <div class="Currency-item">
+                                <div class="Currency-item" @click="handleCenterDialogVisible(2)">
                                   <div class="prefix-item">选择网络</div>
                                   <div class="suffix-item">
                                     {{ extraInfo?.coinName }}
@@ -46,6 +46,8 @@
                                   <div style="flex: 1 1 0%; margin-right: 0.3rem">
                                     <div class="wallet-address-title">地址</div>
                                     <el-input
+                                      v-model="extraInfo.coinAddress"
+                                      readonly
                                       style="
                                         min-height: 34px;
                                         text-align: left;
@@ -55,7 +57,7 @@
                                       :rows="3"
                                       type="textarea"
                                     />
-                                    <div class="copy-btn">
+                                    <div class="copy-btn" @click="handleCopy">
                                       <i
                                         slot="suffix"
                                         class="el-input__icon el-icon-document-copy addres-sz"
@@ -116,169 +118,74 @@
             <span>近期儲值記錄</span>
             <span>查看歷史記錄</span>
           </p>
-          <div class="table-data">
-            <div class="table-content light" style="position: relative">
-              <div
-                class="el-table el-table--fit el-table--enable-row-hover el-table--medium"
-                style="width: 100%"
-              >
-                <div class="hidden-columns">
-                  <div>充值</div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="el-table__header-wrapper">
-                  <table
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    class="el-table__header"
-                    style="width: 1508px"
-                  >
-                    <colgroup>
-                      <col name="el-table_2_column_7" width="253" />
-                      <col name="el-table_2_column_8" width="251" />
-                      <col name="el-table_2_column_9" width="251" />
-                      <col name="el-table_2_column_10" width="251" />
-                      <col name="el-table_2_column_11" width="251" />
-                      <col name="el-table_2_column_12" width="251" />
-                      <col name="gutter" width="0" />
-                    </colgroup>
-                    <thead class="has-gutter">
-                      <tr class="">
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_7 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">交易類型</div>
-                        </th>
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_8 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">交易幣種</div>
-                        </th>
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_9 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">交易金額</div>
-                        </th>
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_10 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">交易手續費</div>
-                        </th>
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_11 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">交易日期</div>
-                        </th>
-                        <th
-                          colspan="1"
-                          rowspan="1"
-                          class="el-table_2_column_12 is-leaf el-table__cell"
-                          style="
-                            background-color: transparent;
-                            color: rgb(0, 0, 0);
-                            font-size: 16px;
-                            font-weight: 400;
-                          "
-                        >
-                          <div class="cell">狀態</div>
-                        </th>
-                        <th class="el-table__cell gutter" style="width: 0px; display: none"></th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-                <div class="el-table__body-wrapper is-scrolling-none">
-                  <table
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    class="el-table__body"
-                    style="width: 1508px"
-                  >
-                    <colgroup>
-                      <col name="el-table_2_column_7" width="253" />
-                      <col name="el-table_2_column_8" width="251" />
-                      <col name="el-table_2_column_9" width="251" />
-                      <col name="el-table_2_column_10" width="251" />
-                      <col name="el-table_2_column_11" width="251" />
-                      <col name="el-table_2_column_12" width="251" />
-                    </colgroup>
-                    <tbody></tbody>
-                  </table>
-                  <div class="el-table__empty-block" style="height: 100%; width: 1508px">
-                    <span class="el-table__empty-text">
-                      <div class="table-empty">
-                        <img
-                          src="data:image/png;base64,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"
-                          alt=""
-                        />
-                        <p>暫無資料</p>
-                      </div>
-                    </span>
-                  </div>
-                </div>
+          <el-table
+            :data="rowList"
+            :border="false"
+            :header-cell-style="{
+              backgroundColor: '#212121',
+              color: '#979797',
+              fontSize: '0.187rem',
+              fontWeight: '400',
+              border: 'none'
+            }"
+          >
+            <el-table-column label="交易类型">
+              <template #default="scope">
+                <span v-if="scope.row.orderType == null || scope.row.orderType == 1">充值成功</span>
+                <span v-if="scope.row.orderType == 2">从华盛达账户划入</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="交易币种">
+              <template #default="scope">
+                <span>{{ scope?.row?.symbol?.toUpperCase() || scope?.row?.type }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="交易金额">
+              <template #default="scope">
+                <span>+{{ priceFormat(scope.row.amount) }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="交易手续费">
+              <template #default="scope">
+                <span>{{ priceFormat(scope.row.thirdFee) }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="交易日期">
+              <template #default="scope">
+                <span>{{ _timeFormat(scope.row.createTime) }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column label="状态">
+              <template #default="scope">
+                <span v-if="scope.row.status == 0">审核中</span>
+                <span v-if="scope.row.status == 1">成功</span>
+                <span v-if="scope.row.status == 2">失败</span>
+              </template>
+            </el-table-column>
+            <template #empty>
+              <div class="table-empty">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACECAYAAAB26gJPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABBsSURBVHgB7V1tVttIEGyy5HfYE0Q5QeAEwAmAE2D+71vgBJgTYPbtf5wTQE4Q5wSYE0R7giW/eWy2Sq4hg2LAljSyxky9JyTL+Euq6enpqe4xS0hoECuWsFQ4Oztbe/Pmzf7Kysr6jx8/tnAq854e43yO81f//fff1+Pj49waRiLUkkBEOsLhIQhD4gx/++230R9//PGP9z/r+J/3eH4Xz3O7ur+/P22SWIlQSwAQJQNRvoAoI2zgx/HtDK9Zw24XrzvB/tPh4WHfGkAiVORwZMJhH93YZ6+7W8c5kobkusW5MS1Xuavj6/HcCbYtPLdd11olQkUMdXPXOByCEBm7MvpHOB6BHDdv37799+7u7nd0fe9IMPpUJI66uk8gz8i91/n5OS1Vry6pEqEiBkjQx24H2xqJhO30pe7O7+pIPN+HEql20f1tWEUkQkUMEOCbTUZxPZDgk80JzyodOGuFc+w+R3i/U6uAN5YQJWBptmxCpn4VMhEkDci0B2t1ASLt8xzJhV1PlmxuJEJFCpBgE7u8qiVxgGWio76NwwHDCur+hnj/Q6uARKhIAX+p8JusAZBEslSXtEwcCeJ0zyogESpSwKEuQgHWEOhDMY5FyyR/aq1Kt5cIFS9eDF7OC44SsTvSw9weT9vMhESoSMFuScHLxiD/aSyH/5bxK5sTiVCRgs40g5TWMBhNR7f3EYdriFF9tzmRCBU3rmRNHvDXX39dVh3yE/TNQKoMhxzxze2jrVpk0MXillk8GM8yYTsv0O2da2T28P44l6OrOsPhgVUAR4+0fFVHkNFEytkSNTPOOSlevNwiAb737Z9//rlnAcDYEQi0j/c/ducQpOTc3jt0Wcfzzsu56DtJhff8anOi84TSBOglSMQb08dFugnR2kOCN4nzZrhBlazGS8A16uHaZL4ExU2r2ESFMJOYTu9zgWs9PDo6qvRdO00ofza9bkR4kVCrJxrTHZVBMsBS7fhWyZOm7NrEot9q3i6f8nong7E6ioO5CeX5MMRtSGsBB/MCP+4WreXYIgYJ5SLRFpZUJMWFTRrgp9Jz7BrfTevGpOTkdyPh9oLLV/RFezjkBGLGD6YfA+YXAi7JIB7pa+rCtRj8wI3YurgySCjczK27u7sVJ4arOqE7C9R1UWg31n0ZP/F/W/S/qKPCw0ETvcDKC19sjSMGfGAPW25yhKkItEmktq95H+cw1zKXPgaDwRmHsDF3dQ6OUNR3ew3loMkG+MTn7ogs7Pr8p4pehveUYjt8l09NNdonwwYaVRUOGj7w9/IH0kziyxzSUaaZxI3/oJbxBT+ktlknabH1bcnAxobr5CZi96rEemYF7sFn7D67x3///fd77mEpv4ey+lMtFHwXWqTDWfpTRzyTGVcLvNSoprLv47dqixzTfguuE1WTZ01Z9K7gl0g5CSIyzfRDabalp+nztZJCbFO/LIlqwhTgOl0pMPmFjdCWBI8IJetyIss0s0kUiQ6cnoavFcn2y1MDCT+B6zSwiZjtS53pki7hEaFglulYD6qYYOlphgr7m0hFkl0sy8UKAQ06loZUD4SidQIBnCNXCdTTcFThTLgv2rKEJyFS3bjGGDMeCEXrhBs/tBpQNzng6M+dc6KtZKWeB0jFgVCGAVHUpCoIxZtNJ9qPonIUgu3I5gRjGiBUzz12oi1sjYrBlhH0XWMfzDgL9UiuIOecLWVkc0IEYqzFJxCzWfct4VnI76QqYb9KY+4CCkLhZm+CQL7+hQQbVQ26yW/adI+Zcx9CXbiMcGEX+p0uVy4mOEJxcjB/OInQAUhxbhWhGkQPFkpWay35UbPBpTXZJLYXlavgurx1F8X1RmiVpwRwMfheZfLQYc8sYSYoAfMgtsDnNE35uiaC64DkKRMqr5JF8ZqhWYjjmEg1jVAkQm4JnQBINbSfgc/MOg5HqKZ9m+QrNQgvmn7ZdT/UESp30gabCOYyqwHWcbRJ7MlH5jv+CfOBpOLoGW7DhXUYbpQ3vru7+6BzI6sZhJSWKXeP1aqyZZCiLBKUQoNU3ymNto6iIJSyRYu4kaZPxnWGqwwZlAo50NEfWUJtwEk/4vXtajS9UGxSxisJ76keM4WmkqJPjuOaP40j3fLIXjHu7+/XcW0+WAPA/TmlPwVSWaiEh6ooCMXhKb7cpQRyozoKQpCH4ryRf47zU9JHvUqwgCos9lFJ110LaqCbjKYr7kfk3r8EzUh6Cr6mfEBLYhXm7xxonVSJdts7VyQ4LJPMdV7gt+9aICiJtCgdrVMZ/zAjCc+5stK5/SwtnYuAeQg9+wOhJEf9BgJUTodiqpXmAHPv3ImvPkhoHqurq7tPDXjcgEilpTNTmjn3IBwfk1QjZRePrO53cQc0j/jwUyksN+Y1l3Li933rRMeRBEM/P3eOfEIzcIMsPXx0H5Qm91H1y0/o9jC5hMqTqnmDq6UPHzCXa97qHS7ThdMEXho0zfwjgiV0CyLbV22nroY5U9fBg0GVtWB+yctTyvQ161U/lQfvw0+jYiaHd27pUoSWHSLYkJtG67yPXxD3Gs1KrKnDDr9wgj1RvcNLY6a57LkwAT6ccZITkamy07dMeXkh0cZ1UgJvscgQ7uvgOXdoauawsls3QBSmg3MOiV98pNGEuYVpsB+42gOufhMTHXB+I1mm5QEnqHF/ef+Zd3CN4yd7nhcDI7A4myBJXyODW7cWm4aemZy6XRXPGDRVBCJZqNnQ9nVy1kr+8lX5+RdrbLIrwxzSNt6AUd4+Nqoxe6o7tKmCCz38z0bIiiIJ3QCtlSTKZ9MkyjPX2JSJqywLTlgeyCXalkbrxveVUxXghEqQ7v24rNFKhEqoDPpQnM7xM8MToRJqgTU9zcsMT4RKqAWXGc4SjHwcXeH7p6DIbmbLgdvjgJXtmobKD3Cp2vPoCeXqmNtEFRrNTXgBhfQkoqmrIujJg+gJxYlsXPgxY2W2RGDhes2Rdv53kfSUwhSN2yKHlo9fuoCqUqfWvWykriN/+/btu2VwyqdlKUcPp81nxV6LCNF3eXQIJQrk8LV1DXUgrKlgyWARuvCKKNLkoieUZsLNr5q3BCh0SfALo5jqklo35/FShA1c/r8lLAqZG2GnwGZCbXAVLMqFedw5CyXh/IUyNBIigPIuiyThTlkoqT6vucyppZJCUaCcd9kJQtEqMcuCozWJ9aJeH+81QXmXw4fHtmAoIeIaLH9HfXqVdW4TFgNaJ+59pe5CfSitelUsBxLLEDnhJ5QJ0/fPLYxQ7OJAph0tVFR7UrfjaoOo1AOzgOlyWr730bRX64TyVzlXulWtSHAkaoPY1APPQkVRGMnfKD/XKqFcAilz55tyvGNRG8SkHngJasBTVy1rzSn3spGHTY7iYlEbRKgemAoVQHlyLehWLJSWcSeZjgLk7kWhNohVPeBjlgIowQklMl2q8MaVNYxI1AYxqgceQT3MxUt+YFBCeWTaCzXKiURtEJV6oAzPXem/dB+DEcp9CdYaCj1kTmqDcPB9X7grLzaIIE659yWOUuQ7XpTIdDrLaxonlOJC7kuk4hmRogqZiMYJJenJ1TxfIqFbqEomolEfSjGKdTife5YQJdxAyiqQiWjMQinOsv+aC9zHDk7Wi0z9qj1MYxbKG1bmlhAd1Lvs1w3xNEIoV4+8PPOc0H1oEDXA4ccmJq9rE0pdHaPAHywhKjh/iYMoTqc0EcWvTSiM6ljAc5i6urig8t+cXWhU3FiLUNLF9JJ1igeeHi2IPquuhWI56WSdIgHVApzg5T0LlQhSi1CsrZhWmuo+vFxHrrS6G3Ixp8pxKLeEbJqr6zboK3HZOuY6tpFVVNlCcY3itI5wd6ER3JmWStk+bilJojKhtFRH44K5hHqQ093HIYuo9tvWYFXu8jhKAKlyS+gMXPeGe/ODS6nMol9qGnWccs5I55awcNzf329xtoJ+Upvd2zQsTVnp1wzGArnecxeW4q1FqLu7u9+xS8uPLRirq6u9riwDV9mH0hofHy0hwUNlC8WQgVb2TAqDANDaKdwy73TnayRUJhQcwBsNT1Mtp4agdZx3uEKqeUTSIpcFweB88xRXVR3DGf9sHcOLS8Q+B62cztWyR9YwXtMSsd7MPyfbucxFsYEwN2VJiQKW77V4eEE8FvyaddXy0KjllJNMjMbicMMS5oanRyqINMtITV0eN1qnY74Hk1wZfwIxF06sWppyWaZbxkAsYS4oCHltk67tiNVjqsyzkWB47QEDmZxmoRR72lrAbaF2HIo1C7T27DhE7YJlhCTTJ3rYmyV/Ea8h+ehH5diucN0/+5ZIxwcuBQr/z0h531pG7awXrT27x65P1TkSnoGrYIJtZJPskplGyfi/DV5ndG9FqppIw4a85f+f7scG/u8jrOCFtYxaTrkPrzDGOX7UwGpiGZ1yZz14jaglA2opXVk0VVV46cAflx14FjnDcxm60gNrCY3l5bEvp6SUF4otQ8kLCR6ov6fzjT0Dwn2rCRYJISlZ65L+WPmaM7cOn7fSpo/baCo6zS1/IOMmMsl9Syjg6e95k9cZx7OGIDnvUL7so+Jr+Jwj7HbKXWMoBKm+wpZBa4UL955dF0c0yWLZlqe/X2864i1rdEUr6J9nNygf96JMthAIVmOTF07D2W1sH2mSQaxLDmnb+GFdA1cN5wI7ali5BYCs3275+orEtGDBi7IFl6+44axNhrQ9Rnfxw4Yg1sgmw9+bEJH2DsJ1c8Fqgsopn+roayDwDYdBq+I0NsqbF7BWm/iRHEKvS07M+SkKxMaaJyyq9MOUd26+qgrQgH7gt6zo+F90Tettj2BDTpU5LExgp6jwQ2TYzVHZhGBFpFcpWtETqtzNaZi/Ze0rNa7w2Ts2iYEFQWcUm6U5Kie2/0aidV2yMQMedXPKFupZy4SCdfoH15SjvmAKkc6u6KnRCSefL2MfIbqAo3OWWQobu/UF/C42zMwCotNLxCri7uIrmcWNHFuRHCuCDbisiLWLjH9CrubQ+SQFxldAJprqL3Dkx4y10HRbZOCAg8mxJv9Foy5Gt3dbnFQPHq5Z2CivChR2oFMZYxyLqssMDeShZKRbsoSTuW1omDglxmg9LGMWaoQZFaFiB2cNtETJyJ0DqaiLOmxj6TN+PnaZC1+EQKd9qGWDBhnlqZFW/EQ3rxq6HkUiVIvQEiJZeaJWc5+FTxVCbalKOXxfdrtB/bVEqJYhhesv8h5aKvpSOOw3Kf8hed0CTniYUelpAZF8qAWAwjfsWPhr45nn+3WyWbwqLDtSG7Da4HtO2FtAJEItCCDNEIT58ZSakhYKz59onjPHNgQxvr5ELlkkvuZQ1X0ZFSe5rtsYTSZCLRAkFXbvNfLLn/m/IvlT5GLIZKxSSk7yWySBMlePy7fSsjEaz/f01m0ZtFHeJxFqwVD31ps1bECCII7ERM/MfsbjSKxbWbBb/3+rLgJUFYlQHYCXbHAFn+m8iW5JXR+zXlojE5EI1RGUfKZPVRcTEJFo9fh+vbaL6iZCdQwesSg+pDpgKFXr+LnXgESckioEi9gGSmervdTGvEiE6jCcM24T0SGJQlL5JCnK/dARx561EYaLLvOdCBUJpKWiQ/7OnYO/9R27fBGW6Cn8D/OW6DqLggGnAAAAAElFTkSuQmCC"
+                  alt=""
+                />
+                <p>暂无资料</p>
               </div>
-            </div>
-          </div>
+            </template>
+          </el-table>
         </div>
       </div>
     </div>
   </div>
   <el-dialog
     v-model="centerDialogVisible"
-    title="请选择币种"
+    :title="centerDialogVisibleTitle"
     style="padding: 0; margin-top: 15vh; width: 40%"
   >
     <div class="select-time-panel" style="background-color: transparent">
       <div class="title">
         请注意，系统只会显示此平台上支持的的网络，若您通过其他网络充值，您的资产可能会丢失。
       </div>
-      <ul class="Currency">
+      <ul class="Currency" v-if="centerDialogVisibleValue === 1">
         <li v-for="(item, index) in coinList" :key="index" @click="handleClose(item)">
           <span class="CoinIcon-s">
             <span class="symbol">
@@ -292,36 +199,62 @@
           <i v-if="info.icon === item.icon" class="el-icon-check"></i>
         </li>
       </ul>
+      <ul class="Currency" v-else>
+        <li v-for="(item, index) in tabList" :key="index" @click="handleNetworkClose(item)">
+          <span class="CoinIcon-s">
+            <span class="symbol"></span>
+            &nbsp; {{ item.coinName }}
+          </span>
+          <i v-if="extraInfo?.coinName === item.coinName" class="el-icon-check"></i>
+        </li>
+      </ul>
     </div>
   </el-dialog>
-  <el-dialog
-    v-model="centerDialogVisible1"
-    title="请选择币种"
-    style="padding: 0; margin-top: 15vh; width: 40%"
-  >
-    {{ tabList }}
-  </el-dialog>
-  <div class="global-loading" v-if="checkLoading">
-    <img src="@/assets/image/viewLoading.gif" class="img" />
-  </div>
 </template>
 <script setup>
 import { useMainStore } from '@/store/index'
 import { filterCoin2 } from '@/utils/public'
 import { getPayAddress } from '@/api/user'
+import { ElNotification } from 'element-plus'
+import { getRechargeList, getBonsList } from '@/api/account'
+import { priceFormat } from '@/utils/decimal'
+import { _timeFormat } from '@/utils/public'
 import QRCode from 'qrcode'
+import Copy from 'vue-clipboard3'
+const { toClipboard } = Copy()
 const mainStore = useMainStore()
 const centerDialogVisible = ref(false)
-const centerDialogVisible1 = ref(false)
+const centerDialogVisibleValue = ref(1)
+const centerDialogVisibleTitle = ref('')
 const coinList = ref()
 const info = ref({})
 const extraInfo = ref({
   coinName: '',
   coinAddress: ''
 })
-const extra = ref()
-const handleCenterDialogVisible = () => {
+const tabList = ref([])
+const handleCenterDialogVisible = (value) => {
+  centerDialogVisibleValue.value = value
+  if (value === 1) {
+    centerDialogVisibleTitle.value = '请选择币种'
+  } else {
+    centerDialogVisibleTitle.value = '请选择充值网络'
+  }
   centerDialogVisible.value = true
+}
+const handleCopy = async () => {
+  try {
+    await toClipboard(`${extraInfo.value.coinAddress}`)
+    ElNotification({
+      title: '复制成功',
+      type: 'success'
+    })
+  } catch (e) {
+    ElNotification({
+      title: '复制失败',
+      type: 'error'
+    })
+  }
 }
 const handleClose = (value) => {
   info.value = value
@@ -329,10 +262,10 @@ const handleClose = (value) => {
     createQRImage(extraInfo.value.coinAddress)
   } else {
     if (value.extra.length > 0) {
-      extra.value = value.extra
+      tabList.value = value.extra
       extraInfo.value = { ...value.extra[0], rechargeMin: value.rechargeMin }
     } else {
-      extra.value = [
+      tabList.value = [
         {
           coinName: value.title,
           coinAddress: value.address
@@ -345,6 +278,30 @@ const handleClose = (value) => {
       }
     }
     createQRImage(extraInfo.value.coinAddress)
+  }
+  centerDialogVisible.value = false
+}
+const handleNetworkClose = (value) => {
+  if (value) {
+    if (value.isThird) {
+      let obj = {
+        address: tabList.value[0].coinAddress,
+        amount: 0,
+        code: tabList.value[0].code,
+        coin: tabList.value[0].coin,
+        currency: tabList.value[0].currency,
+        useAddress: tabList.value[0].useAddress,
+        symbol: tabList.value[0].symbol
+      }
+      getPayAddress(obj).then((res) => {
+        extraInfo.value.coinAddress = res.msg
+        extraInfo.value.coinName = value.coinName
+        createQRImage(extraInfo.value.coinAddress)
+      })
+      extraInfo.value = {}
+    } else {
+      extraInfo.value = value
+    }
   }
   centerDialogVisible.value = false
 }
@@ -376,7 +333,6 @@ const createQRImage = (address) => {
     })
   }
 }
-const tabList = ref([])
 watch(
   () => info.value,
   async () => {
@@ -451,9 +407,35 @@ watch(
     }
   }
 )
-
 const getImageUrl = (name) => {
   return new URL(`../../../assets/image/${name}.png`, import.meta.url).href
+}
+const rowList = ref([])
+const getRechargeListFun = async () => {
+  let str = 'pageNum=1&pageSize=100000'
+  let res1 = await getRechargeList(str)
+  let arr1 = []
+  if (res1.code == 200) {
+    arr1 = res1.rows.map((item) => ({
+      ...item
+    }))
+  } else {
+    rowList.value = []
+  }
+  let res2 = await getBonsList(str)
+  let arr2 = res2.rows
+    .map((item) => ({
+      ...item,
+      orderType: 2
+    }))
+    .filter((item) => {
+      return item.giveType == 0 && item.async == 1
+    })
+  rowList.value = [...arr1, ...arr2]
+    .sort((a, b) => {
+      return new Date(b.params.createTime) - new Date(a.params.createTime)
+    })
+    .slice(0, 10)
 }
 onMounted(() => {
   let arr = mainStore.getRechargeList.map((item, index) => {
@@ -469,6 +451,7 @@ onMounted(() => {
   info.value = arr[0]
   coinList.value = arr
   handleClose(info.value)
+  getRechargeListFun()
 })
 </script>
 <style lang="scss" scoped>
@@ -556,17 +539,34 @@ onMounted(() => {
   border: none;
   cursor: pointer;
 }
-.global-loading {
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999999;
-  position: fixed !important;
-  width: 100vw;
-  height: 100vh;
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.table-empty {
+  margin: 2.667rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.el-table {
+  background-color: transparent;
+}
+.el-table:before {
+  display: none;
+}
+:deep(.el-table tr) {
+  background-color: transparent !important;
+  border: none;
+}
+:deep(.el-table td.el-table__cell) {
+  border: none;
+}
+:deep(.el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell) {
+  background-color: transparent !important;
+}
+:deep(.el-table__row:hover) {
+  background-color: #212121 !important;
+  color: #fff !important;
+}
+:deep(.el-table--fit .el-table__inner-wrapper:before) {
+  display: none;
 }
 </style>

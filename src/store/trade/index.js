@@ -137,11 +137,6 @@ export const useTradeStore = defineStore('trade', {
             volume: tempData.vol
           }
 
-          // if (this.currentCoinList.includes(data.symbol) && data.origin != 'kline') {
-          //   console.log('detail', tempData, data)
-          //   return
-          // }
-
           if (this.allCoinPriceInfo[data.symbol]?.volume2) {
             tempObj.volume = this.allCoinPriceInfo[data.symbol]?.volume2
             tempObj.volume24 = this.allCoinPriceInfo[data.symbol]?.volume2
@@ -171,7 +166,6 @@ export const useTradeStore = defineStore('trade', {
               )
               tempObj.priceChangePercent =
                 Math.abs(priceChangePercent) < 0.01 ? '0.01' : priceChangePercent
-              // console.log('24小时change', data.symbol, tempObj.open, tempObj.priceChangePercent)
             }
             // 实时change
             let tempChange = _toFixed(

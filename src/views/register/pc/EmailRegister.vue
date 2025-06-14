@@ -143,51 +143,43 @@ const handleSubmit = throttle(async () => {
         activeCode: ruleForm.value.activeCode,
         code: ruleForm.value.code,
         signType: 1
-      })
-        .then((res) => {
-          if (res.code == '200') {
-            ElNotification({
-              title: '注册成功',
-              type: 'success',
-              duration: 3000
-            })
-            if (autoLogin.value) {
-              setTimeout(() => {
-                if (res.code == '200' && res.data.satoken) {
-                  ElNotification({
-                    title: '登录成功',
-                    type: 'success',
-                    duration: 3000
-                  })
-                  let token = res.data.satoken
-                  userStore.setIsSign(true)
-                  userStore.setToken(token)
-                  setTimeout(() => {
-                    router.replace('/')
-                    userStore.getUserInfo()
-                  }, 500)
-                } else {
-                  ElNotification({
-                    title: res.msg,
-                    type: 'error',
-                    duration: 3000
-                  })
-                }
-              }, 1000)
-            } else {
-              router.push('/login')
-            }
+      }).then((res) => {
+        if (res.code == '200') {
+          ElNotification({
+            title: '注册成功',
+            type: 'success'
+          })
+          if (autoLogin.value) {
+            setTimeout(() => {
+              if (res.code == '200' && res.data.satoken) {
+                ElNotification({
+                  title: '登录成功',
+                  type: 'success'
+                })
+                let token = res.data.satoken
+                userStore.setIsSign(true)
+                userStore.setToken(token)
+                setTimeout(() => {
+                  router.replace('/')
+                  userStore.getUserInfo()
+                }, 500)
+              } else {
+                ElNotification({
+                  title: res.msg,
+                  type: 'error'
+                })
+              }
+            }, 1000)
           } else {
-            ElNotification({
-              title: res.msg,
-              type: 'error',
-              duration: 3000
-            })
+            router.push('/login')
           }
-        })
-        .catch((err) => {
-          console.log(err)
-        })
+        } else {
+          ElNotification({
+            title: res.msg,
+            type: 'error'
+          })
+        }
+      })
     }
   })
 }, 3000)

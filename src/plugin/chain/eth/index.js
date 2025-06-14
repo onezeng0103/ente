@@ -66,7 +66,6 @@ export const initSwitchWalletEvent = async () => {
 
     window.ethereum.on('disconnect', (code, reason) => {
       // 断开连接
-      console.log('disconnect', code, reason)
     })
   }
 }

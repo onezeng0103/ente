@@ -993,7 +993,6 @@ onMounted(async () => {
   const aosInitElements = document.querySelectorAll('.show-backInRight')
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      console.log(entry)
       if (entry.isIntersecting) {
         const el = entry.target
         el.style.cssText = 'visibility: visible;'

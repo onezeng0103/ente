@@ -69,7 +69,6 @@ export const useUserStore = defineStore('user', {
     async getUserInfo() {
       const res = await getUserInfo()
       if (res.code == 200) {
-        console.log(res)
         Object.assign(this.userInfo, res.data || {})
         Object.assign(this.asset, this.userInfo.asset || [])
         await this.getUserWithdrawAddressList()

@@ -1,3 +1,30 @@
 @import './app.css';
 @import './iconfont.css';
 @import './chunk-visual.1749735967313.css';
+.el-popper__arrow {
+  display: none;
+}
+.el-select__popper.el-popper {
+  border: none;
+}
+.is-pure {
+  border: none !important;
+}
+.el-select-dropdown {
+  top: -10px;
+  margin: 0;
+  border-radius: 0.16rem !important;
+  border: 0.5px solid #858586 !important;
+  background-color: #242731;
+}
+.el-select-dropdown__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.16rem;
+}
+.el-select-dropdown__item.is-hovering {
+  background-color: #31353d !important;
+  color: #c4c4c4 !important;
+}
