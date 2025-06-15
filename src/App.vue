@@ -38,11 +38,11 @@ const isPcFooterShow = computed(() => {
   return list.includes(route.path)
 })
 const isH5TopShow = computed(() => {
-  const list = ['/recharge','/cashflow']
+  const list = ['/recharge', '/cashflow', '/exchange','/flashExchange']
   return list.includes(route.path)
 })
 const isH5FooterShow = computed(() => {
-  const list = ['/login', '/register', '/recharge','/cashflow']
+  const list = ['/login', '/register', '/recharge', '/cashflow', '/exchange','/flashExchange']
   return list.includes(route.path)
 })
 

@@ -1,0 +1,567 @@
+.transfer {
+    --bg: #fff;
+    --btn: #3740f7
+}
+
+.is_dark .transfer {
+    --bg: #fff;
+    --btn: #000
+}
+
+.transfer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg)
+}
+
+.transfer .h-transfer {
+    background-color: #0b0b0b;
+    border-bottom: .013rem solid #ebebeb;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.transfer .h-transfer img {
+    height: 2.267rem
+}
+
+.transfer .h-transfer .c-transfer-title {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer .h-transfer .c-transfer-title p:first-child {
+    font-size: .44rem;
+    color: #fff;
+    text-align: center
+}
+
+.transfer .h-transfer .c-transfer-title p:first-child i {
+    font-size: .48rem;
+    vertical-align: middle;
+    font-weight: 100
+}
+
+.transfer .h-transfer .c-transfer-title P:last-child {
+    font-size: .24rem;
+    line-height: .333rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center
+}
+
+.transfer .c-transfer {
+    width: 80%;
+    margin: .4rem 0;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.transfer .c-transfer .l-transferbox {
+    width: 50%;
+    border: .013rem solid #ebebeb;
+    padding: .2rem .267rem;
+    overflow: hidden;
+    border-radius: .213rem
+}
+
+.transfer .c-transfer .l-transferbox .form-title {
+    padding: .2rem 0;
+    font-size: .173rem;
+    font-weight: 700
+}
+
+.transfer .c-transfer .l-transferbox .select-icon .el-input__prefix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.transfer .c-transfer .l-transferbox .select-icon .el-input__prefix .symbol {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer .c-transfer .l-transferbox .select-icon .el-input__prefix .symbol svg {
+    width: .333rem;
+    height: .333rem
+}
+
+.transfer .c-transfer .l-transferbox .select-icon .el-select {
+    width: 100%
+}
+
+.transfer .c-transfer .l-transferbox .select-icon .el-select .el-input__inner {
+    height: .6rem;
+    border: 0;
+    padding-left: .533rem;
+    background-color: #fafafa;
+    border-radius: calc(infinity * .013rem)
+}
+
+.transfer .c-transfer .l-transferbox .Account-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .t-Account {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .t-Account span {
+    width: 40%;
+    padding: .2rem 0;
+    font-size: .173rem;
+    font-weight: 700
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .l-Account {
+    width: 40%
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .l-Account .el-select {
+    width: 100%
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .l-Account .el-select .el-input__inner {
+    height: .6rem;
+    border: 0;
+    background-color: #fafafa;
+    border-radius: calc(infinity * .013rem)
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .c-Account {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .c-Account i {
+    font-size: .347rem
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .c-Account i:hover {
+    cursor: pointer
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .r-Account {
+    width: 40%
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .r-Account .el-select {
+    width: 100%
+}
+
+.transfer .c-transfer .l-transferbox .Account-box .b-Account .r-Account .el-select .el-input__inner, .transfer .c-transfer .l-transferbox .money .el-input__inner {
+    height: .6rem;
+    border: 0;
+    background-color: #fafafa;
+    border-radius: calc(infinity * .013rem)
+}
+
+.transfer .c-transfer .l-transferbox .money .all {
+    font-weight: 700;
+    color: #000;
+    margin-right: .107rem;
+    line-height: .6rem
+}
+
+.transfer .c-transfer .l-transferbox .money .all:hover {
+    cursor: pointer
+}
+
+.transfer .c-transfer .l-transferbox .submit {
+    margin: .2rem 0;
+    width: 100%;
+    height: .667rem;
+    background-color: var(--btn);
+    color: #fff;
+    border-radius: calc(infinity * .013rem)
+}
+
+.SelectDailog {
+    --fontcolor: #000;
+    --libg: #fafafa
+}
+
+.SelectDailog .van-popup {
+    padding: 0 .4rem
+}
+
+.SelectDailog .SelectDailog-title {
+    margin: .4rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.SelectDailog .SelectDailog-title p {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    font-size: .427rem;
+    font-weight: 400;
+    color: var(--fontcolor)
+}
+
+.SelectDailog .SelectDailog-title i {
+    font-size: .533rem
+}
+
+.SelectDailog .ul-table .li-item {
+    margin: .267rem 0;
+    background: var(--libg);
+    border-radius: .4rem;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .267rem
+}
+
+.SelectDailog .ul-table .li-item .l-li-item {
+    -ms-flex-item-align: center;
+    align-self: center;
+    color: var(--fontcolor);
+    font-size: .467rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.SelectDailog .ul-table .li-item .l-li-item .Currency-name {
+    padding: 0 .133rem
+}
+
+.SelectDailog .ul-table .li-item .r-li-item {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.SelectDailog .ul-table .li-item .r-li-item .van-radio__icon--checked .van-icon {
+    border-radius: .133rem
+}
+
+.bar {
+    --title: #1d1d1d;
+    --bg: #fff
+}
+
+.is_dark .bar {
+    --title: #f7f7f7;
+    --bg: #161a1e
+}
+
+.van-nav-bar {
+    background-color: var(--bg);
+    margin-bottom: .667rem
+}
+
+.van-nav-bar:after {
+    border: none !important
+}
+
+.van-nav-bar .van-nav-bar__content {
+    height: 50px
+}
+
+.van-nav-bar .van-nav-bar__left, .van-nav-bar .van-nav-bar__title {
+    color: var(--title)
+}
+
+.van-nav-bar .van-nav-bar__left .iconfont {
+    font-size: .533rem;
+    vertical-align: middle
+}
+
+.van-nav-bar .van-nav-bar__right {
+    color: var(--title)
+}
+
+.transfer {
+    --bg: #fafafa;
+    --card: #fff;
+    --font: #000;
+    --formitembg: #f4f6f8
+}
+
+.transfer {
+    min-height: 100vh;
+    padding: .453rem .533rem;
+    background-color: var(--bg)
+}
+
+.el-form-item__error {
+    font-size: .333rem !important
+}
+
+.transfer-box {
+    --selectbg: #f7f9fb;
+    --cardcolor: #161a1e;
+    --inputcolor: #fff;
+    --selectcolor: grey;
+    --buttoncolor: #ffd337
+}
+
+.transfer-box {
+    position: relative;
+    background-color: var(--card);
+    border-radius: .4rem;
+    padding: .333rem .267rem
+}
+
+.transfer-box .deposit {
+    margin: .413rem 0;
+    font-size: .32rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center
+}
+
+.transfer-box .deposit .Insufficient-balance {
+    color: #777
+}
+
+.transfer-box .deposit .recharge {
+    display: inline-block;
+    padding: .013rem 0;
+    color: #000;
+    border-bottom: .013rem solid #000
+}
+
+.transfer-box .transfer-content .transfer-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: .36rem;
+    font-weight: 500;
+    color: var(--font);
+    padding: .267rem 0
+}
+
+.transfer-box .transfer-content .transfer-title i {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-right: .2rem;
+    font-size: .533rem;
+    color: #6a6a6a
+}
+
+.transfer-box .transfer-content .form-item-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: #f4f6f8;
+    border-radius: calc(infinity * .013rem);
+    padding: .2rem .267rem;
+    min-height: 1.067rem
+}
+
+.transfer-box .transfer-content .form-item-div .l-item-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+
+.transfer-box .transfer-content .form-item-div .l-item-div .icon-bns {
+    vertical-align: middle
+}
+
+.transfer-box .transfer-content .form-item-div .l-item-div .symbol {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer-box .transfer-content .form-item-div .l-item-div .symbol svg {
+    width: .533rem;
+    height: .533rem
+}
+
+.transfer-box .transfer-content .form-item-div .l-item-div .coin-name {
+    margin-left: .2rem;
+    font-size: .373rem;
+    font-weight: 700;
+    color: var(--font);
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer-box .transfer-content .form-item-div i {
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: .333rem;
+    color: var(--font)
+}
+
+.transfer-box .money {
+    padding: .227rem 0 .613rem 0;
+    font-size: .32rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: .267rem;
+    color: var(--font);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.transfer-box .money .recharge {
+    color: #1cb0ff
+}
+
+.transfer-box .r-card {
+    position: absolute;
+    right: 5%;
+    top: 17%;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.transfer-box .r-card .iconfont {
+    font-size: 1.067rem;
+    color: var(--goldColor)
+}
+
+.transfer-box .bn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.067rem
+}
+
+.transfer-box .bn-icon svg {
+    padding: 0 .067rem 0 0;
+    width: .4rem;
+    height: .4rem
+}
+
+.transfer-box .el-form--label-top .transfer-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: .36rem;
+    font-weight: 500;
+    color: var(--font);
+    padding: .267rem 0
+}
+
+.transfer-box .el-form--label-top .transfer-title i {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    font-size: .533rem;
+    color: #6a6a6a
+}
+
+.transfer-box .el-form-item__label {
+    color: var(--inputcolor);
+    font-size: .32rem;
+    font-weight: 400;
+    line-height: .32rem
+}
+
+.transfer-box .el-input .el-input__inner {
+    height: 1.067rem;
+    border: 0;
+    background-color: #f4f6f8;
+    border-radius: calc(infinity * .013rem);
+    font-size: .32rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--font)
+}
+
+.transfer-box .el-input .all-money {
+    line-height: 1.067rem;
+    font-size: .32rem;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 .133rem 0 0;
+    color: var(--font)
+}
+
+.transfer-box .el-select {
+    width: 100%
+}
+
+.transfer-box .el-select .el-input__inner {
+    height: 1.067rem;
+    border: 0;
+    background-color: var(--generalBackGroundColor);
+    border-radius: .4rem;
+    font-size: .32rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--selectcolor)
+}
+
+.transfer-box .confirm .el-button {
+    height: 1.067rem;
+    border: 0;
+    border-radius: calc(infinity * .013rem);
+    color: #fff;
+    font-size: .373rem;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    background-color: #000
+}

@@ -1,16 +1,13 @@
 .van-popup {
-    background: #7b7b7c;
+    background: rgb(123, 123, 124);
 }
 
 .van-popup .exit {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 0.667rem 0.667rem 0 0;
+    padding: 0.667rem 0.667rem 0px 0px;
 }
 
 .van-popup .exit i {
@@ -19,37 +16,28 @@
 
 .van-popup .canvas_bg {
     height: 13.333rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .van-popup .canvas_bg .canvas {
     width: 8.8rem;
-    -webkit-box-shadow: 0.027rem 0.027rem 0.053rem 0.027rem rgba(0, 0, 0, 0.25);
-    box-shadow: 0.027rem 0.027rem 0.053rem 0.027rem rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.25) 0.027rem 0.027rem 0.053rem 0.027rem;
 }
 
 .van-popup .canvas_bg .canvas .canvas_top {
     width: 8.8rem;
     height: 8.533rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    background: url(/static/img/Groupfenxiang.png);
+    background: url(/src/assets/image/Groupfenxiang.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -60,8 +48,7 @@
     line-height: 2;
 }
 
-.van-popup .canvas_bg .canvas .canvas_top > h6 p,
-.van-popup .canvas_bg .canvas .canvas_top > h6 span {
+.van-popup .canvas_bg .canvas .canvas_top > h6 p, .van-popup .canvas_bg .canvas .canvas_top > h6 span {
     font-size: 0.667rem !important;
     font-weight: 700 !important;
 }
@@ -71,72 +58,57 @@
 }
 
 .van-popup .canvas_bg .canvas .canvas_top span {
-    color: #fff !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .van-popup .canvas_bg .canvas .canvas_top .canvas-title {
     font-size: 0.64rem;
     font-weight: 400;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding-top: 0.8rem;
     width: 80%;
 }
 
 .van-popup .canvas_bg .canvas .canvas_top .canvas-hub {
     padding: 0.4rem 0.653rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .van-popup .canvas_bg .canvas .canvas_top .canvas-hub h6 {
     font-size: 0.48rem;
     font-weight: 400;
-    color: #a46509;
+    color: rgb(164, 101, 9);
     width: 2.427rem;
-    line-height: 0.8rem;
     line-height: 2;
 }
 
 .van-popup .canvas_bg .canvas .canvas_top .canvas-hub img {
     width: 5.2rem;
     height: 4.533rem;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
 .van-popup .canvas_bg .canvas .canvas_bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 3.107rem;
     width: 8.8rem;
-    border-radius: 0 0 0.133rem 0.133rem;
-    background: #fff;
+    background: rgb(255, 255, 255);
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .van-popup .canvas_bg .canvas .canvas_bottom ul {
     -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    color: #000;
-    -ms-flex-pack: distribute;
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
     justify-content: space-around;
 }
 
-.van-popup .canvas_bg .canvas .canvas_bottom ul,
-.van-popup .canvas_bg .canvas .canvas_bottom ul li:first-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.van-popup .canvas_bg .canvas .canvas_bottom ul, .van-popup .canvas_bg .canvas .canvas_bottom ul li:first-child {
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -147,12 +119,9 @@
 
 .van-popup .canvas_bg .canvas .canvas_bottom ul li:first-child p {
     margin-left: 0.2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -168,21 +137,17 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .van-popup .canvas_bg .canvas .canvas_bottom ul li:nth-child(2) {
     width: 2.667rem;
     height: 2.667rem;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    background-color: rgb(255, 255, 255);
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     border-radius: 0.16rem;
 }
@@ -194,43 +159,33 @@
 
 .van-popup .copy_box {
     height: 6.667rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .van-popup .copy_box ul {
-    color: #000;
+    color: rgb(0, 0, 0);
     width: 9.04rem;
     font-size: 0.32rem;
 }
 
 .van-popup .copy_box ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0.36rem;
-    padding: 0 0.533rem;
-    background-color: #fff;
+    padding: 0px 0.533rem;
+    background-color: rgb(255, 255, 255);
     border-radius: 0.267rem;
-    -webkit-box-shadow: 0 0.027rem 0.053rem rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0.027rem 0.053rem rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.027rem 0.053rem;
     height: 0.96rem;
 }
 
@@ -242,17 +197,13 @@
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
-    background: #fff;
-    color: #000;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -260,72 +211,64 @@
     font-size: 0.48rem;
 }
 
-.el-dialog {
-    background: #7b7b7c;
-    margin-top: 0 !important;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.el-dialog__wrapper {
+    background: rgb(123, 123, 124);
 }
 
-.exit {
+.el-dialog__wrapper .el-dialog {
+    background: rgb(123, 123, 124);
+    box-shadow: none;
+    margin-top: 0px !important;
+}
+
+.el-dialog__wrapper .exit {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    padding: 0 0.667rem 0 0;
+    padding: 0px 0.667rem 0px 0px;
 }
 
-.exit i {
+.el-dialog__wrapper .exit i {
     font-size: 0.533rem;
 }
 
-.canvas_bg {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.el-dialog__wrapper .canvas_bg {
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
-.canvas_bg .canvas {
+.el-dialog__wrapper .canvas_bg .canvas {
     width: 6.133rem;
-    -webkit-box-shadow: 0.027rem 0.027rem 0.053rem 0.027rem rgba(0, 0, 0, 0.25);
-    box-shadow: 0.027rem 0.027rem 0.053rem 0.027rem rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.25) 0.027rem 0.027rem 0.053rem 0.027rem;
 }
 
-.canvas_bg .canvas .canvas_top {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_top {
     width: 6.133rem;
     height: 7.2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    background: url('@/assets/image/Groupfenxiang.png');
+    background: url(/src/assets/image/Groupfenxiang.png);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
 }
 
-.canvas_bg .canvas .canvas_top .canvas-title {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_top .canvas-title {
     font-size: 0.427rem;
     font-weight: 400;
-    color: #9f5300;
+    color: rgb(159, 83, 0);
     text-indent: 1em;
     padding-top: 0.8rem;
     width: 80%;
 }
 
-.canvas_bg .canvas .canvas_top .canvas-hub {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_top .canvas-hub {
     font-size: 0.427rem;
     font-weight: 400;
     text-align: left;
@@ -333,168 +276,134 @@
     width: 80%;
 }
 
-.canvas_bg .canvas .canvas_top .canvas-hub p,
-.canvas_bg .canvas .canvas_top .canvas-hub span {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_top .canvas-hub p, .el-dialog__wrapper .canvas_bg .canvas .canvas_top .canvas-hub span {
+    text-align: center;
     font-size: 0.427rem !important;
     font-weight: 600 !important;
-    color: #fff !important;
-    text-align: center;
+    color: rgb(255, 255, 255) !important;
 }
 
-.canvas_bg .canvas .canvas_bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom {
     display: flex;
     height: 1.773rem;
     width: 6.133rem;
-    border-radius: 0 0,
-    0.133rem,
-    0.133rem;
-    background: #fff;
+    background: rgb(255, 255, 255);
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
-.canvas_bg .canvas .canvas_bottom ul {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul {
     -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    color: #000;
-    -ms-flex-pack: distribute;
+    flex: 1 1 0%;
+    color: rgb(0, 0, 0);
     justify-content: space-around;
 }
 
-.canvas_bg .canvas .canvas_bottom ul,
-.canvas_bg .canvas .canvas_bottom ul li:first-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul, .el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:first-child {
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
-.canvas_bg .canvas .canvas_bottom ul li:first-child img {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:first-child img {
     width: 0.8rem;
     height: 0.8rem;
 }
 
-.canvas_bg .canvas .canvas_bottom ul li:first-child p {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:first-child p {
     margin-left: 0.2rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
-.canvas_bg .canvas .canvas_bottom ul li:first-child p span:first-child {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:first-child p span:first-child {
     font-size: 0.427rem;
     font-weight: 700;
 }
 
-.canvas_bg .canvas .canvas_bottom ul li:first-child p > span:last-of-type {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:first-child p > span:last-of-type {
     font-size: 0.24rem;
     font-weight: 400;
     width: 2.667rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
-.canvas_bg .canvas .canvas_bottom ul li:nth-child(2) img {
+.el-dialog__wrapper .canvas_bg .canvas .canvas_bottom ul li:nth-child(2) img {
     width: 1.333rem;
     height: 1.333rem;
 }
 
-.copy_box {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.el-dialog__wrapper .copy_box {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding-top: 0.4rem;
 }
 
-.copy_box ul {
-    color: #000;
+.el-dialog__wrapper .copy_box ul {
+    color: rgb(0, 0, 0);
     width: 6.133rem;
     font-size: 0.24rem;
 }
 
-.copy_box ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.el-dialog__wrapper .copy_box ul li {
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0.36rem;
-    padding: 0 0.533rem;
-    background-color: #fff;
+    padding: 0px 0.533rem;
+    background-color: rgb(255, 255, 255);
     border-radius: 0.267rem;
-    -webkit-box-shadow: 0 0.027rem 0.053rem rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0.027rem 0.053rem rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.027rem 0.053rem;
     height: 0.693rem;
 }
 
-.copy_box ul li .el-icon-document-copy {
+.el-dialog__wrapper .copy_box ul li .el-icon-document-copy {
     padding-left: 0.213rem;
 }
 
-.copy_box button {
+.el-dialog__wrapper .copy_box button {
     width: 1.067rem;
     height: 1.067rem;
     border-radius: 50%;
-    background: #fff;
-    color: #000;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
-.copy_box button i {
+.el-dialog__wrapper .copy_box button i {
     font-size: 0.347rem;
 }
 
 .invite {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 .invite .nodata {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    margin: 1.333rem 0;
+    margin: 1.333rem 0px;
 }
 
 .invite .nodata h6 {
@@ -504,57 +413,44 @@
 .invite .nodata img {
     width: 1.6rem;
     height: 1.6rem;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
 .invite .invite-header-box {
-    background-position: 50%;
+    background-position: 50% center;
     background-size: cover;
 }
 
 .invite .invite-header-box .invite-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 1.067rem 1.333rem;
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
 }
 
 .invite .invite-header-box .invite-header .neck {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .invite .invite-header-box .invite-header .neck .invitationPromote {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
-.invite .invite-header-box .invite-header .neck .invitationPromote P {
+.invite .invite-header-box .invite-header .neck .invitationPromote p {
     font-size: 0.56rem;
     font-weight: 400;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .invite .invite-header-box .invite-header .neck .enterInvitationGet {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -566,13 +462,13 @@
 .invite .invite-header-box .invite-header .neck .enterInvitationGet p {
     font-size: 0.373rem;
     font-weight: 400;
-    color: #a46509;
+    color: rgb(164, 101, 9);
 }
 
 .invite .invite-header-box .invite-header .neck .enterInvitationGet p span {
-    font-size: 0.373rem !important;
     font-weight: 700;
-    color: #fff !important;
+    font-size: 0.373rem !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 .invite .invite-header-box .invite-header .neck .enterInvitationGet p > p:nth-of-type(2) span {
@@ -582,8 +478,8 @@
 
 .invite .invite-header-box .invite-header .neck .el-button {
     width: 2.667rem;
-    background-color: #fff;
-    color: #000;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 0.32rem;
     font-size: 0.293rem;
@@ -593,18 +489,13 @@
 .invite .invite-header-box .invite-header .invitation_copy_box {
     width: 8.453rem;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -612,24 +503,19 @@
     width: 8rem;
     font-size: 0.32rem;
     border-radius: 0.16rem;
-    border: 0.013rem solid #d8d8d8;
+    border: 0.013rem solid rgb(216, 216, 216);
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li {
-    padding: 0.267rem 0.267rem;
-    color: #fff;
+    padding: 0.267rem;
+    color: rgb(255, 255, 255);
 }
 
-.invite .invite-header-box .invite-header .invitation_copy_box ul li,
-.invite .invite-header-box .invite-header .invitation_copy_box ul li > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.invite .invite-header-box .invite-header .invitation_copy_box ul li, .invite .invite-header-box .invite-header .invitation_copy_box ul li > div {
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     border-radius: 0.107rem;
 }
@@ -640,7 +526,7 @@
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li > div p {
-    color: #d8d8d8;
+    color: rgb(216, 216, 216);
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li .input-box {
@@ -655,25 +541,11 @@
     width: 100%;
 }
 
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-.memberUserName
-> span:first-of-type {
-    color: #d8d8d8;
+.invite .invite-header-box .invite-header .invitation_copy_box ul li .memberUserName > span:first-of-type {
+    color: rgb(216, 216, 216);
 }
 
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-> div:last-of-type
-.currentDomainName {
+.invite .invite-header-box .invite-header .invitation_copy_box ul li > div:last-of-type .currentDomainName {
     width: 4rem;
     display: inline-block;
     white-space: nowrap;
@@ -684,76 +556,40 @@ li
 .invite .invite-header-box .invite-header .invitation_copy_box ul li .el-icon-copy-document {
     cursor: pointer;
     border-radius: 0.16rem;
-    color: #bcff2f;
+    color: rgb(188, 255, 47);
     display: inline-block;
     padding: 0.267rem;
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li .el-input__inner {
-    border: 0.013rem solid #d8d8d8;
+    border: 0.013rem solid rgb(216, 216, 216);
     border-radius: 0.16rem;
     background-color: transparent;
     padding: 0.333rem 0.267rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-.el-input__inner::-webkit-input-placeholder {
-    color: #999b99;
-}
-
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-.el-input__inner::-moz-placeholder {
-    color: #999b99;
-}
-
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-.el-input__inner:-ms-input-placeholder {
-    color: #999b99;
-}
-
-.invite
-.invite-header-box
-.invite-header
-.invitation_copy_box
-ul
-li
-.el-input__inner::-ms-input-placeholder {
-    color: #999b99;
+.invite .invite-header-box .invite-header .invitation_copy_box ul li .el-input__inner::-webkit-input-placeholder {
+    color: rgb(153, 155, 153);
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li .el-input__inner::placeholder {
-    color: #999b99;
+    color: rgb(153, 155, 153);
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul li .el-button {
     width: auto;
     height: auto;
     border-radius: 0.16rem;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 0.2rem 0.333rem;
     font-size: 0.293rem;
-    color: #000;
+    color: rgb(0, 0, 0);
     white-space: nowrap;
 }
 
 .invite .invite-header-box .invite-header .invitation_copy_box ul > li:last-of-type {
-    margin: 0;
+    margin: 0px;
 }
 
 .invite .commission {
@@ -766,36 +602,35 @@ li
 }
 
 .invite .commission .commission-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 0.267rem 0.8rem;
-    background-color: #f5f7f8;
+    background-color: rgb(245, 247, 248);
     border-radius: 0.16rem;
     margin-top: 0.267rem;
 }
 
 .invite .commission .commission-list li {
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
-    align-items: center;
+    -webkit-box-align: start;
+    align-items: flex-start;
 }
 
 .invite .commission .commission-list li > h6:first-of-type {
     font-size: 0.32rem;
     font-weight: 400;
     padding-top: 0.267rem;
-    color: #768085;
+    color: rgb(118, 128, 133);
 }
 
 .invite .commission .commission-list li > h6:last-of-type {
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 0.56rem;
     font-weight: 400;
     padding-top: 0.267rem;
@@ -809,11 +644,8 @@ li
 
 .invite .invite-Step {
     padding: 0.4rem 1.333rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -826,14 +658,14 @@ li
 }
 
 .invite .invite-Step li div > h6 {
-    padding: 0.267rem 0;
-    color: #000;
+    padding: 0.267rem 0px;
+    color: rgb(0, 0, 0);
 }
 
 .invite .invite-Step li div p {
     font-size: 0.267rem;
     font-weight: 400;
-    color: #383838;
+    color: rgb(56, 56, 56);
 }
 
 .invite .invite-rule {
@@ -841,7 +673,7 @@ li
 }
 
 .invite .invite-rule .invite-rule-box {
-    background: #f5f7f8;
+    background: rgb(245, 247, 248);
     border-radius: 0.16rem;
 }
 
@@ -850,32 +682,28 @@ li
 }
 
 .invite .invite-rule .invite-rule-box > div > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .invite .invite-rule .invite-rule-box > div > div > h6:first-of-type {
     font-size: 0.48rem;
     font-weight: 400;
-    color: #383838;
+    color: rgb(56, 56, 56);
 }
 
 .invite .invite-rule .invite-rule-box > div > div > h6:first-of-type .el-icon-document-remove {
-    color: #c4c4c4;
+    color: rgb(196, 196, 196);
     font-size: 0.48rem;
 }
 
 .invite .invite-rule .invite-rule-box > div > h6:first-of-type {
     font-size: 0.267rem;
     font-weight: 400;
-    padding: 0.267rem 0 0.4rem 0;
+    padding: 0.267rem 0px 0.4rem;
 }
 
 .invite .invite-rule .invite-rule-box > div > h6:last-of-type {
@@ -886,7 +714,7 @@ li
 .invite .invite-rule .invite-rule-box > div p {
     font-size: 0.267rem;
     font-weight: 400;
-    color: #979797;
+    color: rgb(151, 151, 151);
 }
 
 .invite .Overview {
@@ -897,24 +725,17 @@ li
 }
 
 .invite .invite-grade {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     padding-bottom: 0.8rem;
 }
 
 .invite .invite-grade li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -925,7 +746,7 @@ li
 .invite .invite-grade li span {
     font-size: 0.427rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .invite .invite-list-box {
@@ -937,82 +758,67 @@ li
 }
 
 .invite .invite-list-box .invite-border .invite-myrewards {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .invite .invite-list-box .invite-border .invite-myrewards h6 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     font-size: 0.48rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .invite .invite-list-box .invite-border .invite-myrewards .el-select .el-input__inner {
-    background-color: #f5f7f8;
+    background-color: rgb(245, 247, 248);
     border: none;
     border-radius: 0.16rem;
     font-size: 0.187rem;
     font-weight: 400;
     padding: 0.267rem;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
-.invite .invite-list-box .invite-border .invite-myrewards .el-select .el-icon-arrow-up:before {
-    content: '';
+.invite .invite-list-box .invite-border .invite-myrewards .el-select .el-icon-arrow-up::before {
+    content: "";
 }
 
 .invite .invite-list-box .invite-border .invite-myrewards .el-select .el-select__caret {
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .invite .invite-list-box .invite-border .invite-myrewards .el-select .el-input__prefix {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     font-size: 0.187rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .invite .invite-list-box .invite-border .my_rewards_title {
     margin: 0.133rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     border-radius: 0.16rem;
-    background-color: #f5f7f8;
+    background-color: rgb(245, 247, 248);
 }
 
 .invite .invite-list-box .invite-border .my_rewards_title > li {
     width: 4rem;
     font-size: 0.32rem;
     font-weight: 400;
-    color: #383838;
+    color: rgb(56, 56, 56);
     padding: 0.2rem 0.133rem;
 }
 
-.invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(2),
-.invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(3),
-.invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(4) {
+.invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(2), .invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(3), .invite .invite-list-box .invite-border .my_rewards_title > li:nth-of-type(4) {
     text-align: center;
 }
 
@@ -1022,17 +828,13 @@ li
 
 .invite .invite-list-box .invite-border .my_invitation_record_content {
     font-size: 0.2rem;
-    margin-top: 0.08rem;
     margin: 0.133rem;
     min-height: 4rem;
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 0.333rem;
 }
@@ -1040,7 +842,6 @@ li
 .invite .invite-list-box .invite-border .my_invitation_record_content li img {
     width: 0.653rem;
     height: 0.68rem;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -1049,65 +850,48 @@ li
     text-align: center;
     font-size: 0.32rem;
     font-weight: 400;
-    color: #383838;
+    color: rgb(56, 56, 56);
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li > p:first-of-type {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li > p:first-of-type .vip {
-    color: #ff8d1a;
+    color: rgb(255, 141, 26);
     padding-left: 0.133rem;
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li .receive-but {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
     width: auto;
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li .receive-but .el-button {
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
     border-radius: 0.667rem;
     padding: 0.133rem 0.333rem;
     border: none;
 }
 
-.invite
-.invite-list-box
-.invite-border
-.my_invitation_record_content
-li
-.receive-but
-.el-button
-span {
+.invite .invite-list-box .invite-border .my_invitation_record_content li .receive-but .el-button span {
     font-size: 0.24rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .invite .invite-list-box .invite-border .my_invitation_record_content li .receive-but .received {
-    background-color: #d8d8d8;
+    background-color: rgb(216, 216, 216);
 }
 
 .invite .invite-list-box .invite-border .pagination {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0.667rem;
 }
@@ -1136,8 +920,6 @@ span {
 
 .mobile_invite_box .t-Switch {
     margin-top: 0.267rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background-color: var(--SwitchBg);
     border-radius: 0.16rem;
@@ -1150,11 +932,11 @@ span {
     font-size: 0.373rem;
     font-weight: 400;
     text-align: center;
-    padding: 0.267rem 0;
+    padding: 0.267rem 0px;
 }
 
 .mobile_invite_box .t-Switch .active-span {
-    background: #283139;
+    background: rgb(40, 49, 57);
     border-radius: 0.16rem;
 }
 
@@ -1164,7 +946,7 @@ span {
     height: 1.2rem;
     font-size: 0.48rem;
     font-weight: 400;
-    background: #13141a;
+    background: rgb(19, 20, 26);
     line-height: 1.2rem;
     text-align: center;
 }
@@ -1177,27 +959,22 @@ span {
 }
 
 .mobile_invite_box .inviteContent {
-    padding: 0.2rem 0 0 0;
+    padding: 0.2rem 0px 0px;
 }
 
-.mobile_invite_box .inviteContent,
-.mobile_invite_box .inviteContent .neck {
-    display: -webkit-box;
-    display: -ms-flexbox;
+.mobile_invite_box .inviteContent, .mobile_invite_box .inviteContent .neck {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .neck {
     width: 100%;
     margin-bottom: 0.667rem;
-    background-position: 50%;
+    background-position: 50% center;
     background-size: cover;
     border-radius: 0.213rem;
 }
@@ -1208,8 +985,7 @@ span {
     line-height: 2;
 }
 
-.mobile_invite_box .inviteContent .neck > h6 p,
-.mobile_invite_box .inviteContent .neck > h6 span {
+.mobile_invite_box .inviteContent .neck > h6 p, .mobile_invite_box .inviteContent .neck > h6 span {
     font-size: 0.667rem !important;
     font-weight: 700 !important;
     color: var(--font) !important;
@@ -1219,46 +995,41 @@ span {
     font-size: 0.64rem;
     font-weight: 400;
     color: var(--font);
-    padding: 0.733rem 0.653rem 0 0.653rem;
+    padding: 0.733rem 0.653rem 0px;
 }
 
 .mobile_invite_box .inviteContent .neck .neck-hub {
     padding: 0.4rem 0.653rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .mobile_invite_box .inviteContent .neck .neck-hub h6 {
     font-size: 0.48rem;
     font-weight: 400;
-    color: #a46509;
+    color: rgb(164, 101, 9);
     width: 2.427rem;
-    line-height: 0.8rem;
     line-height: 2;
 }
 
 .mobile_invite_box .inviteContent .neck .neck-hub img {
     width: 5.2rem;
     height: 4.533rem;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
 .mobile_invite_box .inviteContent .neck .commission {
     width: 100%;
-    padding: 0.667rem 0.267rem 0 0.267rem;
-    background: hsla(0, 0%, 85%, 0.6);
+    padding: 0.667rem 0.267rem 0px;
+    background: rgba(217, 217, 217, 0.6);
     border-radius: 0.213rem;
 }
 
 .mobile_invite_box .inviteContent .neck .commission > h6 {
     font-size: 0.48rem;
     font-weight: 400;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .mobile_invite_box .inviteContent .neck .commission > h6 img {
@@ -1267,43 +1038,32 @@ span {
 }
 
 .mobile_invite_box .inviteContent .neck .commission .commission-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    padding: 0.533rem 0;
+    padding: 0.533rem 0px;
 }
 
 .mobile_invite_box .inviteContent .neck .commission .commission-list li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .neck .commission .commission-list li > h6:first-of-type {
-    color: #ffc700;
-    text-shadow: -0.013rem -0.013rem 0 #ff7a00,
-    0.013rem -0.013rem 0 #ff7a00,
-    -0.013rem 0.013rem 0 #ff7a00,
-    0.013rem 0.013rem 0 #ff7a00;
+    color: rgb(255, 199, 0);
+    text-shadow: rgb(255, 122, 0) -0.013rem -0.013rem 0px, rgb(255, 122, 0) 0.013rem -0.013rem 0px, rgb(255, 122, 0) -0.013rem 0.013rem 0px, rgb(255, 122, 0) 0.013rem 0.013rem 0px;
     font-size: 0.427rem;
     font-weight: 400;
     text-align: center;
 }
 
 .mobile_invite_box .inviteContent .neck .commission .commission-list li > h6:last-of-type {
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 0.32rem;
     font-weight: 400;
     padding-top: 0.267rem;
@@ -1323,66 +1083,47 @@ span {
     height: 0.733rem;
     font-size: 0.48rem;
     font-weight: 400;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_process .process_content {
-    padding: 0.533rem 0;
+    padding: 0.533rem 0px;
     border-radius: 0.267rem;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_process .process_content ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_process .process_content ul li {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    margin: 0.267rem 0;
+    margin: 0.267rem 0px;
 }
 
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_process
-.process_content
-ul
-li
-.sequence {
+.mobile_invite_box .inviteContent .invitation_bg .invitation_process .process_content ul li .sequence {
     display: block;
     font-size: 0.32rem;
     line-height: 0.48rem;
     text-align: center;
     border-radius: 0.267rem;
-    color: #fff;
+    color: rgb(255, 255, 255);
     width: 0.48rem;
     height: 0.48rem;
-    background: #000;
+    background: rgb(0, 0, 0);
     margin-right: 0.2rem;
 }
 
@@ -1398,54 +1139,43 @@ li
 .mobile_invite_box .inviteContent .invitation_bg .invitation_process .process_content ul li div p {
     font-size: 0.347rem;
     line-height: 2;
-    color: #919191;
+    color: rgb(145, 145, 145);
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box {
-    padding: 0.467rem 0 0.627rem 0;
+    padding: 0.467rem 0px 0.627rem;
     margin-bottom: 0.627rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul {
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 0.32rem;
     margin-bottom: 0.667rem;
     width: 100%;
-    padding: 0 0.267rem;
-    border: 0.013rem solid #8c8c8c;
+    padding: 0px 0.267rem;
+    border: 0.013rem solid rgb(140, 140, 140);
     border-radius: 0.16rem;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0.36rem;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li > div {
     width: 85%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1457,38 +1187,27 @@ li
     width: 100%;
 }
 
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.memberUserName
-> span:first-of-type {
-    color: #8c8c8c;
+.mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .memberUserName > span:first-of-type {
+    color: rgb(140, 140, 140);
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .el-icon-copy-document {
-    color: #bcff2f;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    color: rgb(188, 255, 47);
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 0.96rem;
     height: 0.96rem;
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
     border-radius: 0.107rem;
     font-size: 0.56rem;
     margin-left: 0.067rem;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li p {
-    color: #8c8c8c;
+    color: rgb(140, 140, 140);
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li span {
@@ -1496,89 +1215,39 @@ li
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-cell {
-    border: 0.013rem solid #8c8c8c;
+    border: 0.013rem solid rgb(140, 140, 140);
     border-radius: 0.16rem;
     background-color: transparent;
     padding: 0.133rem 0.267rem;
 }
 
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.van-cell
-.van-field__control {
+.mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-cell .van-field__control {
     color: var(--font);
 }
 
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.van-cell::-webkit-input-placeholder {
-    color: #999b99;
-}
-
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.van-cell::-moz-placeholder {
-    color: #999b99;
-}
-
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.van-cell:-ms-input-placeholder {
-    color: #999b99;
-}
-
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-li
-.van-cell::-ms-input-placeholder {
-    color: #999b99;
+.mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-cell::-webkit-input-placeholder {
+    color: rgb(153, 155, 153);
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-cell::placeholder {
-    color: #999b99;
+    color: rgb(153, 155, 153);
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-button {
     width: auto;
     height: auto;
     border-radius: 0.16rem;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 0.2rem 0.333rem;
 }
 
 .mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul li .van-button span {
     font-size: 0.373rem;
-    color: #000;
+    color: rgb(0, 0, 0);
     white-space: nowrap;
 }
 
-.mobile_invite_box
-.inviteContent
-.invitation_bg
-.invitation_copy_box
-ul
-> li:nth-of-type(2)
-div
-span {
+.mobile_invite_box .inviteContent .invitation_bg .invitation_copy_box ul > li:nth-of-type(2) div span {
     display: inline-block;
     width: 70%;
     white-space: nowrap;
@@ -1592,33 +1261,29 @@ span {
     background: var(--button);
     font-size: 0.427rem;
     color: var(--buttonFont);
-    border: 0;
-    padding: 0.133rem 0;
+    border: 0px;
+    padding: 0.133rem 0px;
 }
 
 .mobile_invite_box .inviteContent .rule {
     width: 100%;
     color: var(--font);
-    padding: 0.48rem 0;
+    padding: 0.48rem 0px;
     border-radius: 0.16rem;
     margin-top: 0.4rem;
 }
 
 .mobile_invite_box .inviteContent .rule .rule_title {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .rule .rule_title .el-icon-document-remove {
     font-size: 0.48rem;
-    color: #ff8d1a;
+    color: rgb(255, 141, 26);
 }
 
 .mobile_invite_box .inviteContent .rule .rule_title span:nth-child(2) {
@@ -1628,7 +1293,7 @@ span {
 
 .mobile_invite_box .inviteContent .rule .rule_title .problem {
     font-size: 0.32rem;
-    color: #ff8d1a;
+    color: rgb(255, 141, 26);
 }
 
 .mobile_invite_box .inviteContent .rule .rule_content {
@@ -1641,7 +1306,7 @@ span {
 
 .mobile_invite_box .inviteContent .rule .rule_content a {
     margin-top: 0.48rem;
-    color: #e68d04;
+    color: rgb(230, 141, 4);
 }
 
 .mobile_invite_box .inviteContent .rule .rule_level {
@@ -1649,13 +1314,9 @@ span {
 }
 
 .mobile_invite_box .inviteContent .rule .rule_level ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -1663,24 +1324,18 @@ span {
     font-size: 0.24rem;
     margin-top: 0.667rem;
     width: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
 .mobile_invite_box .inviteContent .rule .rule_level ul li img {
     width: 2rem;
-    -o-object-fit: cover;
     object-fit: cover;
     margin-bottom: 0.16rem;
 }
@@ -1697,14 +1352,14 @@ span {
     font-size: 0.507rem;
     font-weight: 400;
     color: var(--font);
-    padding: 0 0.067rem;
+    padding: 0px 0.067rem;
 }
 
 .mobile_invite_box .inviteContent .invite-myrewards .invite-filter {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 0.667rem;
     padding: 0.067rem 0.133rem;
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 0.293rem;
 }
 
@@ -1713,28 +1368,21 @@ span {
 }
 
 .mobile_invite_box .inviteContent .my-award-history {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    border-radius: 0.16rem 0.16rem 0 0;
+    border-radius: 0.16rem 0.16rem 0px 0px;
     margin-top: 0.267rem;
 }
 
 .mobile_invite_box .inviteContent .my-award-history .rewardToggle {
-    padding: 0.933rem 0 0.133rem 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    padding: 0.933rem 0px 0.133rem;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
 }
@@ -1742,7 +1390,7 @@ span {
 .mobile_invite_box .inviteContent .my-award-history .rewardToggle li {
     font-size: 0.373rem;
     font-weight: 400;
-    color: #999b99;
+    color: rgb(153, 155, 153);
     text-align: center;
 }
 
@@ -1760,23 +1408,18 @@ span {
 }
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    border-bottom: 0.5px solid #2a3141;
-    padding: 0.4rem 0;
+    border-bottom: 0.5px solid rgb(42, 49, 65);
+    padding: 0.4rem 0px;
 }
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li img {
     width: 0.827rem;
     height: 0.827rem;
-    -o-object-fit: cover;
     object-fit: cover;
     margin-right: 0.067rem;
     border-radius: 50%;
@@ -1790,7 +1433,7 @@ span {
 }
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li .el-button {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 0.667rem;
     padding: 0.133rem 0.333rem;
     border: none;
@@ -1798,11 +1441,11 @@ span {
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li .el-button span {
     font-size: 0.347rem;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li .received {
-    background-color: #7d7c81;
+    background-color: rgb(125, 124, 129);
 }
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li span {
@@ -1811,22 +1454,13 @@ span {
 
 .mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:first-of-type {
     text-align: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 35%;
 }
 
-.mobile_invite_box
-.inviteContent
-.van-list
-.my_invitation_record_content
-li
-> div:first-of-type
-.username {
+.mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:first-of-type .username {
     display: inline-block;
     width: auto;
     white-space: nowrap;
@@ -1834,86 +1468,54 @@ li
     text-overflow: ellipsis;
 }
 
-.mobile_invite_box
-.inviteContent
-.van-list
-.my_invitation_record_content
-li
-> div:first-of-type
-.create-time {
-    color: #7d7c81;
+.mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:first-of-type .create-time {
+    color: rgb(125, 124, 129);
 }
 
-.mobile_invite_box
-.inviteContent
-.van-list
-.my_invitation_record_content
-li
-> div:first-of-type
-.vip {
-    color: #000;
+.mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:first-of-type .vip {
+    color: rgb(0, 0, 0);
     margin-left: 0.133rem;
-    background-color: #ff8d1a;
+    background-color: rgb(255, 141, 26);
     border-radius: 0.107rem;
     padding: 0.027rem 0.067rem;
 }
 
-.mobile_invite_box
-.inviteContent
-.van-list
-.my_invitation_record_content
-li
-> div:nth-of-type(2)
-span {
+.mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:nth-of-type(2) span {
     text-align: right;
-    color: #01bd8d;
+    color: rgb(1, 189, 141);
 }
 
-.mobile_invite_box
-.inviteContent
-.van-list
-.my_invitation_record_content
-li
-> div:nth-of-type(2)
-.create-time {
-    color: #7d7c81;
+.mobile_invite_box .inviteContent .van-list .my_invitation_record_content li > div:nth-of-type(2) .create-time {
+    color: rgb(125, 124, 129);
 }
 
 .mobile_invite_box .inviteContent .my_rewards {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    border-radius: 0 0 0.16rem 0.16rem;
+    border-radius: 0px 0px 0.16rem 0.16rem;
 }
 
 .mobile_invite_box .inviteContent .my_rewards .my_rewards_title {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 0.013rem solid #353535;
+    border-bottom: 0.013rem solid rgb(53, 53, 53);
     width: 100%;
 }
 
 .mobile_invite_box .inviteContent .my_rewards .my_rewards_title > li {
     width: 33%;
-    padding: 0.2rem 0;
+    padding: 0.2rem 0px;
     font-size: 0.32rem;
     font-weight: 400;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .mobile_invite_box .inviteContent .my_rewards .my_rewards_title > li:nth-of-type(2) {
@@ -1926,15 +1528,12 @@ li
 
 .mobile_invite_box .inviteContent .my_rewards .my_invitation_record {
     width: 100%;
-    margin: 0.693rem 0;
+    margin: 0.693rem 0px;
 }
 
 .mobile_invite_box .inviteContent .my_rewards .my_invitation_record h3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     font-size: 0.48rem;
     font-weight: 400;
@@ -1949,11 +1548,6 @@ li
     width: 50%;
 }
 
-.mobile_invite_box
-.invitation-record
-.van-list
-.my_invitation_record_content
-li
-> div:last-of-type {
+.mobile_invite_box .invitation-record .van-list .my_invitation_record_content li > div:last-of-type {
     text-align: right;
 }
