@@ -51,6 +51,41 @@ const router = createRouter({
       path: '/invaite',
       name: 'invaite',
       component: () => import('../views/invaite/index.vue')
+    },
+    {
+      path: '/message',
+      name: 'message',
+      component: () => import('../views/message/index.vue')
+    },
+    {
+      path: '/wallet',
+      name: 'wallet',
+      component: () => import('../views/wallet/index.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/about/index.vue')
+    },
+    {
+      path: '/emailAuthentication',
+      name: 'emailAuthentication',
+      component: () => import('../views/emailAuthentication/index.vue')
+    },
+    {
+      path: '/fund-password',
+      name: 'fund-password',
+      component: () => import('../views/fund-password/index.vue')
+    },
+    {
+      path: '/changePassword',
+      name: 'changePassword',
+      component: () => import('../views/changePassword/index.vue')
+    },
+    {
+      path: '/phoneAuth',
+      name: 'phoneAuth',
+      component: () => import('../views/phoneAuth/index.vue')
     }
     // {
     //   path: '/forget',

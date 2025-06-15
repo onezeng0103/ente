@@ -299,7 +299,7 @@
                         <td rowspan="1" colspan="1" class="el-table_1_column_3 el-table__cell">
                           <div class="cell">
                             <div>
-                              ${{ priceFormat(tradeStore.allCoinPriceInfo[item.coin]?.close) }}7
+                              ${{ priceFormat(tradeStore.allCoinPriceInfo[item.coin]?.close) }}
                             </div>
                           </div>
                         </td>
@@ -702,7 +702,6 @@ import { getHelpcenter, getHelpcenterDetail } from '@/api/help/index'
 import { useRouter } from 'vue-router'
 import { useTradeStore } from '@/store/trade/index'
 import { priceFormat } from '@/utils/decimal.js'
-
 const router = useRouter()
 const tradeStore = useTradeStore()
 import 'swiper/swiper-bundle.css'

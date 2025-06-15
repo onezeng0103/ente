@@ -158,19 +158,13 @@
                         <span>用戶ID: {{ userInfo?.user?.userId }}</span>
                       </div>
                     </li>
-                    <li>
+                    <li @click="router.push('/wallet')">
                       <i class="iconfont icon-gerenzhongxin"></i>
                       用戶中心
                     </li>
-
-                    <li>
+                    <li @click="router.push('/invaite')">
                       <i class="iconfont icon-yaoqing"></i>
-                      邀請
-                    </li>
-
-                    <li>
-                      <i class="iconfont icon-monijiaoyi"></i>
-                      模擬交易
+                      邀请
                     </li>
                     <li @click="handleSignOut">
                       <i class="iconfont icon-tuichudenglu"></i>
@@ -183,18 +177,10 @@
             <div class="right-icons">
               <div class="mode-switcher">
                 <div class="message" v-if="isSign" ref="trigger" @click="isNew = true">
-                  <div class="el-badge item">
-                    <span>
-                      <span class="el-popover__reference-wrapper">
-                        <i
-                          class="iconfont icon-a-tongzhi1 item-icon el-popover__reference"
-                          aria-describedby="el-popover-9544"
-                          tabindex="0"
-                        ></i>
-                      </span>
-                    </span>
-                    <sup class="el-badge__content is-fixed" v-if="isRed">0</sup>
-                  </div>
+                  <i
+                    class="iconfont icon-a-tongzhi1 item-icon el-popover__reference"
+                    aria-describedby="el-popover-9544"
+                  ></i>
                 </div>
                 <div class="lang_list_box" @click="isLanguage = !isLanguage">
                   <i class="iconfont icon-a-international1"></i>
@@ -256,17 +242,19 @@
       position: fixed;
       top: 40px;
       left: 1318px;
+      border-radius: 0.16rem;
+      border: 0.013rem solid #333d4d;
     "
     x-placement="bottom"
   >
     <div class="notify">
       <div class="notify-header">
         <div class="notify-header-left">
-          <span>0</span>
+          <span>{{ newList.length }}</span>
           <h6>通知</h6>
         </div>
         <div class="notify-header-right">
-          <h6>
+          <h6 @click="handleMessage">
             查看全部
             <i class="el-icon-right"></i>
           </h6>
@@ -295,7 +283,6 @@ const router = useRouter()
 const userStore = useUserStore()
 const mainStore = useMainStore()
 const { userInfo } = storeToRefs(userStore)
-
 const isSign = computed(() => userStore.isSign)
 const path = computed(() => {
   let tempPath = mainStore.getLogoList?.logo || mainStore.getLogoList?.logoD
@@ -323,6 +310,11 @@ const handleSignOut = () => {
       })
     }
   })
+}
+
+const handleMessage = () => {
+  isNew.value = false
+  router.push('/message')
 }
 
 const isRed = ref(false)
@@ -360,7 +352,7 @@ onMounted(() => {
     getInfo().then((res) => {
       if (res.code == '200' && res.rows.length > 0) {
         isRed.value = res.rows?.some((item) => item.type == 1 && item.status == 0)
-        newList.value = res.rows
+        newList.value = res.rows.sort((a, b) => new Date(b.createTime) - new Date(a.createTime))
       } else {
         isRed.value = false
       }

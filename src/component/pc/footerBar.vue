@@ -21,7 +21,7 @@
                 <div class="widget-link">
                   <h6 class="title">关于我们</h6>
                   <ul>
-                    <li><a>公司介绍</a></li>
+                    <li @click="router.push('/about')"><a>公司介绍</a></li>
                   </ul>
                 </div>
                 <div class="widget-link">
@@ -33,8 +33,8 @@
                 <div class="widget-link">
                   <h6 class="title">资产管理</h6>
                   <ul>
-                    <li><a>充值</a></li>
-                    <li><a>提现</a></li>
+                    <li @click="router.push('/recharge')"><a>充值</a></li>
+                    <li @click="router.push('/withdraw')"><a>提现</a></li>
                     <li><a>订单列表</a></li>
                   </ul>
                 </div>
@@ -110,7 +110,10 @@
 </template>
 <script setup>
 import { useMainStore } from '@/store/index.js'
+import { useRouter } from 'vue-router'
 import QRCode from 'qrcode'
+const mainStore = useMainStore()
+const router = useRouter()
 const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
 const downloadAppL = useTemplateRef('downloadAppL')
 const downloadIos = useTemplateRef('downloadIos')
@@ -120,7 +123,6 @@ const downloadAppR = useTemplateRef('downloadAppR')
 const downloadAndroid = useTemplateRef('downloadAndroid')
 const downloadAndroidImg = useTemplateRef('downloadAndroidImg')
 const downloadAndroidText = useTemplateRef('downloadAndroidText')
-const mainStore = useMainStore()
 const createQRImage = async (address) => {
   if (!address) return ''
   try {

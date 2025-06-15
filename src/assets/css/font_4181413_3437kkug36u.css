@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "c-iconfont"; /* Project id 4181413 */
+  src: url('//at.alicdn.com/t/c/font_4181413_3437kkug36u.woff2?t=1692857115625') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4181413_3437kkug36u.woff?t=1692857115625') format('woff'),
+       url('//at.alicdn.com/t/c/font_4181413_3437kkug36u.ttf?t=1692857115625') format('truetype');
+}
+
+.c-iconfont {
+  font-family: "c-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c-icon-taolun:before {
+  content: "\e61e";
+}
+
+.c-icon-xiaoxi:before {
+  content: "\e641";
+}
+
+.c-icon-code:before {
+  content: "\e66e";
+}
+
+.c-icon-taiyang:before {
+  content: "\e603";
+}
+
+.c-icon-heiyemoshi:before {
+  content: "\e68f";
+}
+
+.c-icon-codelibrary:before {
+  content: "\e793";
+}
+
+.c-icon-fullscreen:before {
+  content: "\e7ec";
+}
+
+.c-icon-zoomout:before {
+  content: "\e6e1";
+}
+
+.c-icon-zoom:before {
+  content: "\e6e2";
+}
+
+.c-icon-close:before {
+  content: "\e839";
+}
+
+.c-icon-reduce:before {
+  content: "\e840";
+}
+

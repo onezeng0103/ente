@@ -155,4 +155,9 @@ const forget = () => {
 </script>
 <style lang="scss" scoped>
 @import './index.css';
+.code_box {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
 </style>

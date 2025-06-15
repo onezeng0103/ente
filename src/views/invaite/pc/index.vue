@@ -241,7 +241,7 @@ const handleDialogVisible = async () => {
 const exportToPNG = async () => {
   try {
     // 获取要导出的DOM元素
-    const element = document.querySelector('.canvas_bg')
+    const element = document.querySelector('.canvas')
     // 使用html2canvas生成canvas
     const canvas = await html2canvas(element, {
       backgroundColor: null, // 透明背景

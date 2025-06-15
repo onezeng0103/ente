@@ -19,7 +19,7 @@ import { Dialog } from 'vant'
 import { useMainStore } from '@/store/index.js'
 import 'animate.css'
 import loadingDirective from '@/directives/checkLoading'
-
+import NoData from '@/component/pc/noData.vue'
 /**
  * 初始化socket
  */
@@ -34,6 +34,7 @@ app.use(Vant)
 app.use(ConfigProvider)
 app.use(Icon)
 app.use(Dialog)
+app.component('NoData', NoData)
 app.directive('checkLoading', loadingDirective) // 注册为全局指令
 document.addEventListener(
   'touchstart',
