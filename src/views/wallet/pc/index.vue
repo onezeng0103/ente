@@ -23,6 +23,7 @@
           </div>
         </div>
         <Overview v-if="currentTab == 'overview'" />
+        <Kyc v-if="currentTab == 'kyc'" />
         <Security v-if="currentTab == 'security'" />
       </div>
     </div>
@@ -30,7 +31,9 @@
 </template>
 <script setup>
 import Overview from './overview.vue'
+import Kyc from './kyc.vue'
 import Security from './security.vue'
+
 const currentTab = ref('overview')
 </script>
 <style lang="scss" scoped>
