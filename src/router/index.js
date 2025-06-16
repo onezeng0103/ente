@@ -58,6 +58,11 @@ const router = createRouter({
       component: () => import('../views/message/index.vue')
     },
     {
+      path: '/message/detail',
+      name: 'messageDetail',
+      component: () => import('../views/message/detail.vue')
+    },
+    {
       path: '/wallet',
       name: 'wallet',
       component: () => import('../views/wallet/index.vue')
@@ -65,7 +70,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/about/index.vue')
+      component: () => import('../views/about/index.vue') 
     },
     {
       path: '/emailAuthentication',

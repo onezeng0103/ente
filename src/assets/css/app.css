@@ -500,6 +500,8 @@
 
 .notify .notify-list {
   padding-top: 0.333rem;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .notify .notify-list h6 {
@@ -508,10 +510,22 @@
 }
 
 .notify .notify-list li {
+  position: relative;
   margin-bottom: 0.267rem;
   border: 0.013rem solid var(--liBorder);
   border-radius: 0.107rem;
   padding: 0.133rem;
+  cursor: pointer;
+}
+.notify .notify-list li > span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  border-radius: 50%;
 }
 
 .notify .notify-list li > h6 {
@@ -23994,6 +24008,17 @@ input[type='number']::-webkit-outer-spin-button {
 
 .header .header__right .mode-switcher .message {
   margin-right: 0.267rem;
+  position: relative;
+}
+.header .header__right .mode-switcher .message > span {
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f00;
 }
 
 .header .header__right .mode-switcher .message i {
@@ -25495,7 +25520,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:           
+  --tw-contain-style:                                    
 ;
 }
 
@@ -25550,7 +25575,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:           
+  --tw-contain-style:                                    
 ;
 }
 
@@ -25605,7 +25630,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:           
+  --tw-contain-style:                                    
 ;
 }
 

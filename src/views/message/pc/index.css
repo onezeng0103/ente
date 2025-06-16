@@ -169,7 +169,7 @@
 }
 
 .notify .notify-box .notify-bottom .notify-list-box .notify-list li:hover {
-  background-color: var(--notifyHover);
+  background-color: #f1f2f3;
 }
 
 .notify .notify-box .notify-bottom .notify-list-box .notify-list li > div {
