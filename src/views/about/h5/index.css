@@ -1,0 +1,42 @@
+div {
+    background-color: rgb(241, 242, 243);
+}
+
+div .p-container {
+    padding: 0.667rem 15vw;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(241, 242, 243);
+    color: rgb(0, 0, 0);
+    font-size: 0.2rem;
+}
+
+div .p-container div {
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+div .p-container span {
+    color: rgb(0, 0, 0) !important;
+}
+
+div .m-container {
+    color: rgb(0, 0, 0);
+    padding: 0.4rem 0.533rem 0px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 0.347rem;
+    background-color: rgb(241, 242, 243);
+    min-height: 94vh;
+}
+
+div .m-container div {
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+div .m-container span {
+    color: rgb(0, 0, 0) !important;
+}

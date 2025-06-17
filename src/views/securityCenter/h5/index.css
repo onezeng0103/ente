@@ -1,0 +1,260 @@
+.securityCenter .securityCenter-header-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fafafa
+}
+
+.securityCenter .securityCenter-header-box .securityCenter-header {
+    width: 70%;
+    padding: .267rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.securityCenter .securityCenter-header-box .securityCenter-header h6 {
+    font-size: .48rem;
+    font-weight: 400
+}
+
+.securityCenter .securityCenter-header-box .securityCenter-header h6 .el-icon-arrow-left {
+    cursor: pointer
+}
+
+.securityCenter .securityCenter-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.securityCenter .securityCenter-list li, .securityCenter .securityCenter-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.securityCenter .securityCenter-list li {
+    width: 70%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: .013rem solid #e5e5e5;
+    padding: .4rem 0
+}
+
+.securityCenter .securityCenter-list li .list-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.securityCenter .securityCenter-list li .list-left span {
+    font-size: .32rem;
+    font-weight: 400
+}
+
+.securityCenter .securityCenter-list li .list-left span .icon {
+    width: .613rem;
+    height: .587rem
+}
+
+.securityCenter .securityCenter-list li .list-left > span:last-of-type {
+    font-size: .24rem;
+    font-weight: 400;
+    color: gray;
+    padding-left: .733rem;
+    padding-top: .133rem
+}
+
+.securityCenter .securityCenter-list li > span {
+    font-size: .32rem;
+    font-weight: 400;
+    color: #94959b
+}
+
+.securityCenter .securityCenter-list li button {
+    height: .64rem;
+    border-radius: .16rem;
+    background: #eaecef;
+    border: none;
+    padding: 0 .4rem;
+    font-size: .32rem;
+    font-weight: 400;
+    color: #383838
+}
+
+.bar {
+    --title: #1d1d1d;
+    --bg: #fff
+}
+
+.is_dark .bar {
+    --title: #f7f7f7;
+    --bg: #161a1e
+}
+
+.van-nav-bar {
+    background-color: var(--bg);
+    margin-bottom: .667rem
+}
+
+.van-nav-bar:after {
+    border: none !important
+}
+
+.van-nav-bar .van-nav-bar__content {
+    height: 50px
+}
+
+.van-nav-bar .van-nav-bar__left, .van-nav-bar .van-nav-bar__title {
+    color: var(--title)
+}
+
+.van-nav-bar .van-nav-bar__left .iconfont {
+    font-size: .533rem;
+    vertical-align: middle
+}
+
+.van-nav-bar .van-nav-bar__right {
+    color: var(--title)
+}
+
+.updatePopup .van-popup {
+    padding: 0 .267rem
+}
+
+.updatePopup .h-colse {
+    padding: .267rem 0;
+    text-align: right
+}
+
+.updatePopup .h-colse i {
+    font-size: .4rem;
+    color: #000
+}
+
+.updatePopup .c-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 2.667rem
+}
+
+.updatePopup .c-img img {
+    width: 2.667rem;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.updatePopup .c-img p {
+    color: #222;
+    font-size: .347rem;
+    font-weight: 400;
+    text-align: center;
+    margin: .267rem 0 .667rem 0
+}
+
+.updatePopup .b-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.updatePopup .b-btn .esc {
+    width: 40%;
+    border-radius: calc(infinity * .013rem);
+    border: .013rem solid rgba(0, 0, 0, .2);
+    background: #fff;
+    color: #000;
+    padding: .333rem;
+    font-size: .373rem;
+    font-weight: 500;
+    margin-right: 12%
+}
+
+.updatePopup .b-btn .submit {
+    width: 40%;
+    border-radius: calc(infinity * .013rem);
+    border: 0;
+    background: #000;
+    color: #fff;
+    padding: .333rem;
+    font-size: .373rem;
+    font-weight: 500
+}
+
+.securityCenter {
+    --bg: #fafafa
+}
+
+.is_dark .securityCenter {
+    --bg: #fff
+}
+
+.securityCenter {
+    min-height: 100vh;
+    background-color: var(--bg)
+}
+
+.securityCenter .securityCenter-list {
+    margin: .4rem 0;
+    padding: .4rem;
+    background-color: #fff
+}
+
+.securityCenter .securityCenter-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: .533rem
+}
+
+.securityCenter .securityCenter-list li span {
+    font-size: .427rem;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--text)
+}
+
+.securityCenter .securityCenter-list li > span:first-of-type {
+    color: #222
+}

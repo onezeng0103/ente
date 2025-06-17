@@ -1,0 +1,409 @@
+.van-number-keyboard .van-key {
+    color: #000 !important
+}
+
+.mobile_resetPwd_box {
+    padding: 0 .667rem;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    height: 94vh
+}
+
+.mobile_resetPwd_box, .mobile_resetPwd_box .authenticationPopup-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mobile_resetPwd_box .authenticationPopup-header {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .533rem 0
+}
+
+.mobile_resetPwd_box .authenticationPopup-header h6, .mobile_resetPwd_box .authenticationPopup-header i {
+    font-size: .48rem;
+    font-weight: 700;
+    color: #000
+}
+
+.mobile_resetPwd_box .resetPwd_content {
+    font-size: .213rem;
+    color: var(--onsurface);
+    width: 8.933rem
+}
+
+.mobile_resetPwd_box .resetPwd_content a {
+    font-weight: 400
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item {
+    margin-bottom: .48rem
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .show-username {
+    margin-bottom: .093rem
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .show-username span {
+    font-size: .293rem;
+    font-weight: 400;
+    color: var(--text)
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .userName {
+    color: #383838
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__label {
+    width: 100% !important;
+    text-align: left;
+    font-size: .293rem;
+    color: var(--text)
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content {
+    margin-left: 0 !important;
+    max-width: 8.933rem
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner {
+    font-size: .373rem;
+    height: .96rem;
+    width: 100%;
+    border-radius: .667rem;
+    border: .013rem solid #e0e0e0;
+    background-color: transparent;
+    color: #000
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner::-webkit-input-placeholder {
+    color: gray
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner::-moz-placeholder {
+    color: gray
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner:-ms-input-placeholder {
+    color: gray
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner::-ms-input-placeholder {
+    color: gray
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__inner::placeholder {
+    color: gray
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__icon {
+    display: none
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-input__suffix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .icon-style {
+    font-size: .427rem
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-button {
+    border-color: #fff;
+    color: #fff;
+    width: 100%;
+    border-radius: .667rem;
+    height: .96rem;
+    font-size: .48rem;
+    font-weight: 400;
+    background: #000;
+    border: 0
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .el-form-item__content .el-form-item__error {
+    position: static;
+    font-size: .293rem;
+    font-weight: 400
+}
+
+.mobile_resetPwd_box .resetPwd_content .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.mobile_resetPwd_box .resetPwd_content .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.mobile_resetPwd_box .resetPwd_content .code_box .el-button {
+    width: 2.547rem;
+    height: .96rem;
+    padding: .133rem 0;
+    background-color: #d3b25b;
+    color: #fff;
+    border: none;
+    border-radius: .107rem;
+    outline: none
+}
+
+.mobile_resetPwd_box .resetPwd_content .code_box .el-button.is-disabled {
+    color: #fff
+}
+
+.mobile_resetPwd_box .resetPwd_content .code_box .el-button:hover {
+    color: #fff !important;
+    color: var(--onsurface);
+    border: .013rem solid var(--onsurface)
+}
+
+.mobile_resetPwd_box .resetPwd_content .code_box .el-form-item {
+    width: 5.587rem
+}
+
+.mobile_resetPwd_box .resetPwd_content .log {
+    text-align: center;
+    margin-top: 1.48rem
+}
+
+.mobile_resetPwd_box .hieght {
+    height: 8rem
+}
+
+.tradingPassword-box {
+    --elFormBg: #fcfdfd;
+    --inputBg: #f4f6f8;
+    --font: #222
+}
+
+.is_dark .tradingPassword-box {
+    --elFormBg: #232325;
+    --inputBg: #000;
+    --font: #fff
+}
+
+.tradingPassword-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative
+}
+
+.tradingPassword-box .el-icon-back {
+    font-size: .6rem;
+    cursor: pointer;
+    position: absolute;
+    left: .667rem;
+    top: .667rem;
+    color: var(--blackColor);
+    z-index: 2
+}
+
+.tradingPassword-box .both-sides {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative
+}
+
+.tradingPassword-box .both-sides img {
+    width: 100%
+}
+
+.tradingPassword-box .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.tradingPassword-box .box-right > img:first-of-type {
+    width: 90%;
+    position: absolute;
+    bottom: 0
+}
+
+.tradingPassword-box .pwd-content {
+    height: 94vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background: var(--pwdBg);
+    background-size: cover
+}
+
+.tradingPassword-box .pwd-content .el-icon-back {
+    font-size: .6rem;
+    cursor: pointer;
+    position: absolute;
+    left: .667rem;
+    top: .667rem;
+    color: var(--blackColor)
+}
+
+.tradingPassword-box .pwd-content .to-login {
+    margin-top: .133rem
+}
+
+.tradingPassword-box .pwd-content .to-login a {
+    color: var(--onsurface);
+    font-size: .213rem
+}
+
+.tradingPassword-box .pwd-content .pwd-img {
+    width: 50%
+}
+
+.tradingPassword-box .pwd-content .reset_box {
+    color: var(--blackColor);
+    z-index: 100;
+    padding: .8rem .8rem;
+    border-radius: .267rem;
+    background-color: var(--elFormBg)
+}
+
+.tradingPassword-box .pwd-content .reset_box h2 {
+    font-size: .427rem;
+    margin-bottom: .48rem;
+    color: var(--font)
+}
+
+.tradingPassword-box .pwd-content .reset_box a {
+    font-size: .16rem
+}
+
+.tradingPassword-box .pwd-content .reset_box p {
+    color: var(--font)
+}
+
+.tradingPassword-box .pwd-content .reset_box span {
+    font-size: .187rem;
+    letter-spacing: .027rem;
+    color: var(--font)
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form {
+    width: 5.6rem
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: .64rem;
+    margin-bottom: .267rem
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .code_box .el-button {
+    width: 1.88rem;
+    height: .64rem;
+    border-radius: .107rem;
+    padding: .133rem 0;
+    background-color: transparent;
+    border: .013rem solid #000
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .code_box .el-form-item {
+    width: 3.44rem
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .code_box .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .el-form-item {
+    margin-bottom: .2rem
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .el-button {
+    border: none
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .el-form-item__content .el-input__inner {
+    height: .64rem;
+    color: var(--blackColor)
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .el-form-item__content .el-button {
+    height: .64rem;
+    width: 100%;
+    border-radius: .16rem;
+    background: var(--blackColor)
+}
+
+.tradingPassword-box .pwd-content .reset_box .el-form .el-form-item__content .el-button span {
+    color: var(--bg)
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content {
+    margin-left: 0 !important
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content .el-input__inner {
+    height: .64rem;
+    background: #292929;
+    border-radius: .107rem;
+    border: .013rem solid #dbdbdb;
+    color: var(--blackColor)
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content .el-input__icon {
+    display: none
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content .el-input__suffix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content .icon-style {
+    font-size: .213rem
+}
+
+.tradingPassword-box .pwd-content .el-form-item__content .el-form-item__error {
+    position: static
+}

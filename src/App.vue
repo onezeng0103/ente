@@ -5,7 +5,7 @@
     <router-view></router-view>
     <PcFooter v-if="!isH5 && !isPcFooterShow" />
     <H5Footer v-if="isH5 && !isH5FooterShow" />
-    <Drawer v-if="isH5" :drawer="drawer"></Drawer>
+    <Drawer v-if="isH5" :drawer="drawer" @shut="shut"></Drawer>
   </div>
 </template>
 <script setup>
@@ -20,6 +20,9 @@ import Drawer from '@/component/h5/drawer.vue'
 const drawer = ref(false)
 const setDrawer = (value) => {
   drawer.value = value
+}
+const shut = () => {
+  drawer.value = false
 }
 
 const mainStore = useMainStore()
@@ -38,11 +41,35 @@ const isPcFooterShow = computed(() => {
   return list.includes(route.path)
 })
 const isH5TopShow = computed(() => {
-  const list = ['/recharge', '/cashflow', '/exchange','/flashExchange']
+  const list = [
+    '/recharge',
+    '/cashflow',
+    '/exchange',
+    '/flashExchange',
+    '/about',
+    '/securityCenter',
+    '/changePassword',
+    '/emailAuthentication',
+    '/fund-password',
+    '/phoneAuth'
+  ]
   return list.includes(route.path)
 })
 const isH5FooterShow = computed(() => {
-  const list = ['/login', '/register', '/recharge', '/cashflow', '/exchange','/flashExchange']
+  const list = [
+    '/login',
+    '/register',
+    '/recharge',
+    '/cashflow',
+    '/exchange',
+    '/flashExchange',
+    '/about',
+    '/securityCenter',
+    '/changePassword',
+    '/emailAuthentication',
+    '/fund-password',
+    '/phoneAuth'
+  ]
   return list.includes(route.path)
 })
 
