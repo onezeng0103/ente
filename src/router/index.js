@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/recharge/index.vue')
     },
     {
+      path: '/securityCenter',
+      name: 'securityCenter',
+      component: () => import('../views/securityCenter/index.vue')
+    },
+    {
       path: '/cashflow',
       name: 'cashflow',
       component: () => import('../views/cashflow/index.vue')
@@ -70,7 +75,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/about/index.vue') 
+      component: () => import('../views/about/index.vue')
     },
     {
       path: '/emailAuthentication',
