@@ -51,7 +51,9 @@ const isH5TopShow = computed(() => {
     '/changePassword',
     '/emailAuthentication',
     '/fund-password',
-    '/phoneAuth'
+    '/phoneAuth',
+    '/message',
+    '/message/detail'
   ]
   return list.includes(route.path)
 })
@@ -68,7 +70,9 @@ const isH5FooterShow = computed(() => {
     '/changePassword',
     '/emailAuthentication',
     '/fund-password',
-    '/phoneAuth'
+    '/phoneAuth',
+    '/message',
+    '/message/detail'
   ]
   return list.includes(route.path)
 })
