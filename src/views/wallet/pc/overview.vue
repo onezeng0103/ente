@@ -17,19 +17,26 @@
           <div class="user-ifon-box">
             <div class="user-ifon-item">
               <span>电子邮箱</span>
-              <span>zjs17807066@gmail.com</span>
+              <span v-if="email">{{ email }}</span>
+              <span @click="router.push('/emailAuthentication')" v-else class="Unbound">
+                去绑定
+              </span>
             </div>
             <div class="user-ifon-item">
               <span>用戶ID</span>
               <span>{{ userInfo?.user?.userId }}</span>
             </div>
-            <div class="user-ifon-item">
+            <div class="user-ifon-item" @click="handleStart">
               <span>身份认证</span>
-              <span class="Unbound">去绑定</span>
+              <span class="Unbound" v-if="advancedAuth == '0' || advancedAuth == null">去绑定</span>
+              <span class="Unbound" v-if="advancedAuth == '1'">认证成功</span>
+              <span class="Unbound" v-if="advancedAuth == '2'">审核失败重新提交</span>
+              <span class="Unbound" v-if="advancedAuth == '3'">审核中</span>
             </div>
             <div class="user-ifon-item">
               <span>手机号</span>
-              <span>601117894491</span>
+              <span v-if="phone">{{ phone }}</span>
+              <span v-else class="Unbound" @click="router.push('/phoneAuth')">去绑定</span>
             </div>
           </div>
         </div>
@@ -49,10 +56,14 @@
                 <p>需要完成认证后才能购买或储值数位货币</p>
                 <div>
                   <button
+                    @click="handleStart"
                     type="button"
                     class="el-button el-button--default el-button--medium kyc-button"
                   >
-                    <span>未认证</span>
+                    <span v-if="advancedAuth == '0' || advancedAuth == null">未认证</span>
+                    <span v-if="advancedAuth == '1'">认证成功</span>
+                    <span v-if="advancedAuth == '2'">审核失败重新提交</span>
+                    <span v-if="advancedAuth == '3'">审核中</span>
                   </button>
                 </div>
               </div>
@@ -188,7 +199,18 @@
                     <i class="el-icon-right"></i>
                   </span>
                 </li>
-                <NoData />
+                <template v-if="newList.length > 0">
+                  <div
+                    class="li-item"
+                    v-for="item in newList.slice(0, 5)"
+                    :key="item.id"
+                    @click="handleDetail(item)"
+                  >
+                    <div class="li-item-title">{{ item.title }}</div>
+                    <div class="li-item-date">{{ item.createTime }}</div>
+                  </div>
+                </template>
+                <NoData v-else />
               </ul>
             </div>
           </div>
@@ -202,11 +224,15 @@ import { useRouter } from 'vue-router'
 import { useTradeStore } from '@/store/trade/index'
 import { useMainStore } from '@/store/index.js'
 import { priceFormat } from '@/utils/decimal.js'
+import { getInfo } from '@/api/info'
 import { useUserStore } from '@/store/user/index'
 const tradeStore = useTradeStore()
 const mainStore = useMainStore()
 const userStore = useUserStore()
 const { userInfo } = storeToRefs(userStore)
+const advancedAuth = ref(userInfo.value.detail?.auditStatusAdvanced)
+const email = ref(userInfo.value.user?.email)
+const phone = ref(userInfo.value.user?.phone)
 const router = useRouter()
 const listResult = ref([])
 const path = computed(() => {
@@ -220,8 +246,25 @@ const toRafSort = () => {
     })
     .slice(0, 8)
 }
+const handleStart = () => {
+  if (advancedAuth.value == '0' || advancedAuth.value == null || advancedAuth.value == '2') {
+    router.push('/userauth')
+  }
+}
+const newList = ref([])
+const handleDetail = (item) => {
+  router.push({
+    path: '/message/detail',
+    query: { data: encodeURI(JSON.stringify(item)) }
+  })
+}
 onMounted(async () => {
   toRafSort()
+  getInfo().then((res) => {
+    if (res.code == '200' && res.rows.length > 0) {
+      newList.value = res.rows.sort((a, b) => new Date(b.createTime) - new Date(a.createTime))
+    }
+  })
 })
 </script>
 <style lang="scss" scoped>

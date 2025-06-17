@@ -15,5 +15,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Top: typeof import('./src/components/pc/top.vue')['default']
     VanCountDown: typeof import('vant/es')['CountDown']
+    VanRadio: typeof import('vant/es')['Radio']
+    VanRadioGroup: typeof import('vant/es')['RadioGroup']
   }
 }

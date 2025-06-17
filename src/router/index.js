@@ -70,7 +70,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/about/index.vue') 
+      component: () => import('../views/about/index.vue')
     },
     {
       path: '/emailAuthentication',
@@ -91,6 +91,11 @@ const router = createRouter({
       path: '/phoneAuth',
       name: 'phoneAuth',
       component: () => import('../views/phoneAuth/index.vue')
+    },
+    {
+      path: '/userauth',
+      name: 'userauth',
+      component: () => import('../views/userauth/index.vue')
     }
     // {
     //   path: '/forget',

@@ -26,8 +26,15 @@
                   </div>
                 </div>
                 <div class="Certification">
-                  <button type="button" class="el-button el-button--default el-button--medium">
-                    <span><span>立即开始</span></span>
+                  <button
+                    @click="handleStart"
+                    type="button"
+                    class="el-button el-button--default el-button--medium"
+                  >
+                    <span v-if="advancedAuth == '0' || advancedAuth == null">立即开始</span>
+                    <span v-if="advancedAuth == '1'">认证成功</span>
+                    <span v-if="advancedAuth == '2'">审核失败重新提交</span>
+                    <span v-if="advancedAuth == '3'">审核中</span>
                   </button>
                 </div>
               </div>
@@ -38,6 +45,19 @@
     </div>
   </div>
 </template>
+<script setup>
+import { useRouter } from 'vue-router'
+import { useUserStore } from '@/store/user'
+const router = useRouter()
+const userStore = useUserStore()
+const { userInfo } = storeToRefs(userStore)
+const advancedAuth = ref(userInfo.value.detail?.auditStatusAdvanced)
+const handleStart = () => {
+  if (advancedAuth.value == '0' || advancedAuth.value == null || advancedAuth.value == '2') {
+    router.push('/userauth')
+  }
+}
+</script>
 <style lang="scss" scoped>
 @import './index.css';
 </style>
