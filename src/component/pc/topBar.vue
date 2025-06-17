@@ -242,7 +242,7 @@
       z-index: 2009;
       position: fixed;
       top: 40px;
-      left: 1318px;
+      right: 10px;
       border-radius: 0.16rem;
       border: 0.013rem solid #333d4d;
     "
