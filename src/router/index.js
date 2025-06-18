@@ -101,6 +101,11 @@ const router = createRouter({
       path: '/userauth',
       name: 'userauth',
       component: () => import('../views/userauth/index.vue')
+    },
+    {
+      path: '/loan',
+      name: 'loan',
+      component: () => import('../views/loan/index.vue')
     }
     // {
     //   path: '/forget',

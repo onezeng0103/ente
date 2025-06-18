@@ -58,17 +58,14 @@
                   <span>金融</span>
                   <i class="el-icon-arrow-down"></i>
                   <div class="submenu">
-                    <div>
+                    <div @click="router.push('/loan')">
                       <h6 class="flex items-center">
                         <span class="iconfont iconfont icon-a-jiedai1"></span>
                         <span>借贷</span>
                       </h6>
-                      <p>靈活借款,助您應對緊急資金需求.</p>
+                      <p>灵活借款,助您应对紧急资金需求.</p>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <span>ICO</span>
                 </li>
               </ul>
             </nav>
@@ -104,7 +101,7 @@
                       <i class="iconfont icon-huazhuan"></i>
                       划转
                     </li>
-                    <li>
+                    <li @click="router.push('/cashflow')">
                       <span class="iconfont icon-zonglan"></span>
                       <i class="iconfonticon-zonglan"></i>
                       总览
