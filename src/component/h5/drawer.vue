@@ -1,7 +1,11 @@
 <script setup>
 import router from '@/router/index.js'
 import { useUserStore } from '@/store/user/index.js'
+import Copy from 'vue-clipboard3'
+import { ElNotification } from 'element-plus'
+import { useMainStore } from '@/store/index.js'
 
+const mainStore = useMainStore()
 const props = defineProps({
   drawer: Boolean
 })
@@ -14,6 +18,32 @@ const go = (value) => {
 const userStore = useUserStore()
 const { userInfo } = storeToRefs(userStore)
 const isSign = computed(() => userStore.isSign)
+
+const advancedAuth = ref(userInfo.value.detail?.auditStatusAdvanced)
+const handleStart = () => {
+  if (advancedAuth.value == '0' || advancedAuth.value == null || advancedAuth.value == '2') {
+    go('/userauth')
+  }
+}
+const path = computed(() => {
+  let tempPath = mainStore.getLogoList?.logo || mainStore.getLogoList?.logoD
+  return tempPath
+})
+const { toClipboard } = Copy()
+const toCopy = async (text) => {
+  try {
+    await toClipboard(`${text}`)
+    ElNotification({
+      title: '复制成功',
+      type: 'success'
+    })
+  } catch (e) {
+    ElNotification({
+      title: '复制失败',
+      type: 'success'
+    })
+  }
+}
 </script>
 
 <template>
@@ -22,19 +52,22 @@ const isSign = computed(() => userStore.isSign)
       <div class="user-box" v-if="isSign">
         <div class="user-content">
           <span class="l-portrait el-avatar el-avatar--circle">
-            <img src="@/assets/image/fileId=61.png" style="object-fit: cover" />
+            <img :src="path" style="object-fit: cover" />
           </span>
           <div class="c-portrait">
             <h6>
               <span class="user-name">{{ userInfo?.user?.loginName }}</span>
-
-              &nbsp;
-              <span class="Unauthenticated">未認證</span>
+              <span class="Unauthenticated" @click="handleStart()">
+                <template v-if="advancedAuth == '0' || advancedAuth == null">去绑定</template>
+                <template v-if="advancedAuth == '1'">认证成功</template>
+                <template v-if="advancedAuth == '2'">审核失败重新提交</template>
+                <template v-if="advancedAuth == '3'">审核中</template>
+              </span>
             </h6>
             <p>
               <span>UID:</span>
               {{ userInfo?.user?.userId }}
-              <i class="el-icon-copy-document"></i>
+              <i class="el-icon-copy-document" @click="toCopy(userInfo?.user?.userId)"></i>
             </p>
           </div>
           <div class="r-update">
@@ -53,15 +86,15 @@ const isSign = computed(() => userStore.isSign)
           <i class="iconfont icon-a-international1"></i>
           <span>語言</span>
         </div>
-        <div class="table-content">
+        <div class="table-content" @click="go('/invaite')">
           <i class="iconfont icon-yaoqing"></i>
           <span>邀請</span>
         </div>
-        <div class="table-content">
+        <div class="table-content" @click="go('/cashflow')">
           <i class="iconfont icon-a-zichanguanli4"></i>
           <span>資金記錄</span>
         </div>
-        <div class="table-content">
+        <div class="table-content" @click="go('/flashExchange')">
           <i class="iconfont icon-shandui"></i>
           <span>閃兌</span>
         </div>
@@ -104,7 +137,7 @@ const isSign = computed(() => userStore.isSign)
           <i class="iconfont icon-anquanzhongxin"></i>
           <span>安全中心</span>
         </div>
-        <div class="table-content">
+        <div class="table-content" @click="handleStart()">
           <i class="iconfont icon-User"></i>
           <span>KYC</span>
         </div>

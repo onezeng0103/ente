@@ -94,7 +94,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .bill {
   background-color: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
 
   .cashflow {
     padding: 45px 0 100px;

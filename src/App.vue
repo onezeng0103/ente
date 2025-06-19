@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <PcTop v-if="!isH5 && isPcTopShow" />
-    <H5Top v-if="isH5 && !isH5TopShow" :drawer="drawer" @setDrawer="setDrawer" />
+    <H5Top v-if="isH5 && !isH5TopShow" :drawer="drawer" @setDrawer="setDrawer" @shut="shut" />
     <router-view></router-view>
     <PcFooter v-if="!isH5 && !isPcFooterShow" />
     <H5Footer v-if="isH5 && !isH5FooterShow" />
@@ -53,7 +53,8 @@ const isH5TopShow = computed(() => {
     '/fund-password',
     '/phoneAuth',
     '/message',
-    '/message/detail'
+    '/message/detail',
+    '/userauth'
   ]
   return list.includes(route.path)
 })
@@ -72,7 +73,8 @@ const isH5FooterShow = computed(() => {
     '/fund-password',
     '/phoneAuth',
     '/message',
-    '/message/detail'
+    '/message/detail',
+    '/userauth'
   ]
   return list.includes(route.path)
 })

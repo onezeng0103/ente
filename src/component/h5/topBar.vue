@@ -29,10 +29,10 @@
               <div class="mobile-icon">
                 <div></div>
                 <div class="mobile-login-mn"></div>
-                <div class="mobile-solid">
+                <div class="mobile-solid" @click="go('/message')">
                   <i class="iconfont icon-a-tongzhi1 item-icon"></i>
                 </div>
-                <div class="mobile-button" @click="emit('setDrawer',!props.drawer)">
+                <div class="mobile-button" @click="emit('setDrawer', !props.drawer)">
                   <i
                     class="el-icon-s-fold item-icon"
                     :class="{ 'el-icon-s-fold': !props.drawer, 'el-icon-close': props.drawer }"
@@ -44,18 +44,18 @@
         </div>
       </div>
     </header>
-<!--    <Drawer :drawer="drawer"></Drawer>-->
-<!--      <el-drawer v-model="drawer" title="I am the title" :with-header="false">-->
-<!--        <span>Hi there!</span>-->
-<!--      </el-drawer>-->
   </div>
-
 </template>
 <script setup>
-const emit = defineEmits(['setDrawer'])
+import router from '@/router/index.js'
+
+const emit = defineEmits(['setDrawer', 'shut'])
 const props = defineProps({
   drawer: Boolean
 })
-
+const go = (value) => {
+  router.push(value)
+  emit('shut')
+}
 const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
 </script>

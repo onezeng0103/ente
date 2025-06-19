@@ -41,8 +41,9 @@ onMounted(() => {
   .row {
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
     &-item:first-child {
-      color: var(--third-color);
+      color: #999999;
     }
   }
 }
