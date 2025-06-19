@@ -3,7 +3,7 @@
     <div class="my-tabbar">
       <div class="van-tabbar__placeholder" style="height: 51.6484px">
         <div class="van-hairline--top-bottom van-tabbar van-tabbar--fixed">
-          <div class="van-tabbar-item van-tabbar-item--active" style="color: rgb(255, 255, 255)">
+          <div class="van-tabbar-item van-tabbar-item--active" style="color: rgb(255, 255, 255)" @click="go('/')">
             <div class="van-tabbar-item__icon">
               <i class="iconfont icon-a-home1"></i>
             </div>
@@ -42,3 +42,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import router from '@/router/index.js'
+
+const go = (value) => {
+  router.push(value)
+}
+</script>
