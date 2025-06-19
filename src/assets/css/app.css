@@ -23470,10 +23470,6 @@ input[type='number']::-webkit-outer-spin-button {
   font-size: 0.56rem;
 }
 
-.mobile ::v-deep .el-table .cell.el-tooltip {
-  overflow: hidden;
-}
-
 .mobile .custom-dropdown {
   width: 90%;
   left: 5% !important;
@@ -25520,7 +25516,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:                                    
+  --tw-contain-style:                                      
 ;
 }
 
@@ -25575,7 +25571,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:                                    
+  --tw-contain-style:                                      
 ;
 }
 
@@ -25630,7 +25626,7 @@ input[type='number']::-webkit-outer-spin-button {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style:                                    
+  --tw-contain-style:                                      
 ;
 }
 

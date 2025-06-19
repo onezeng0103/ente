@@ -12,6 +12,7 @@
           <div class="c-Haccount-l">
             <h6>
               <span v-if="isEye">{{ _numberWithCommas(allSum) }}</span>
+              <span v-if="isEye" class="currency-name">USDT</span>
               <span v-else>********</span>
             </h6>
           </div>
@@ -357,8 +358,9 @@ const allSum = computed(() => {
   )
 })
 const containerRef = useTemplateRef('containerRef')
-const init = (financSum, contractSum, platformSum, zhanyong) => {
-  Highcharts.chart(containerRef.value, {
+let chartInstance = null
+const init = () => {
+  chartInstance = Highcharts.chart(containerRef.value, {
     chart: {
       type: 'pie', // 使用饼图实现轮廓效果
       backgroundColor: 'transparent', // 背景设置透明
@@ -396,7 +398,7 @@ const init = (financSum, contractSum, platformSum, zhanyong) => {
       },
       useHTML: true,
       labelFormatter: function () {
-        return `<span style="margin-right: 100px;">${this.name}</span><b>${this.percentage.toFixed(6)}%</b>`
+        return `<span style="margin-right: 100px;">${this.name}</span><b>${this.percentage.toFixed(2)}%</b>`
       }
     },
     colors: ['#45dcd0', '#2a6af1', '#002fd1', '#f2495e'],
@@ -404,10 +406,10 @@ const init = (financSum, contractSum, platformSum, zhanyong) => {
       {
         colorByPoint: true,
         data: [
-          { name: '理财资产', y: financSum },
-          { name: '合约资产', y: contractSum },
-          { name: '可用余额', y: platformSum },
-          { name: '锁定金额', y: zhanyong }
+          { name: '理财资产', y: Number(financSum.value) },
+          { name: '合约资产', y: Number(contractSum.value) },
+          { name: '可用余额', y: Number(platformSum.value) },
+          { name: '锁定金额', y: Number(zhanyong.value) }
         ]
       }
     ],
@@ -419,12 +421,10 @@ const init = (financSum, contractSum, platformSum, zhanyong) => {
 onMounted(() => {
   getFinanceAmountApi().then((res) => {
     zhanyong.value = priceFormat(res.data.financial + res.data.pledge)
-    init(
-      (financSum.value / allSum.value) * 100,
-      (contractSum.value / allSum.value) * 100,
-      (platformSum.value / allSum.value) * 100,
-      (zhanyong.value / allSum.value) * 100
-    )
+    init()
+  })
+  window.addEventListener('resize', () => {
+    init()
   })
 })
 </script>

@@ -115,8 +115,8 @@
         </div>
         <div class="Withdrawals-record">
           <p class="Withdrawals-record-title">
-            <span>近期儲值記錄</span>
-            <span>查看歷史記錄</span>
+            <span>近期储值记录</span>
+            <span @click="router.push('/cashflow?id=4')">查看历史记录</span>
           </p>
           <el-table
             :data="rowList"
@@ -206,6 +206,7 @@
   </el-dialog>
 </template>
 <script setup>
+import { useRouter } from 'vue-router'
 import { useMainStore } from '@/store/index'
 import { filterCoin2 } from '@/utils/public'
 import { getPayAddress } from '@/api/user'
@@ -216,6 +217,7 @@ import { _timeFormat } from '@/utils/public'
 import QRCode from 'qrcode'
 import Copy from 'vue-clipboard3'
 const { toClipboard } = Copy()
+const router = useRouter()
 const mainStore = useMainStore()
 const centerDialogVisible = ref(false)
 const centerDialogVisibleValue = ref(1)

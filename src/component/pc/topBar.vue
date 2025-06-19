@@ -106,38 +106,15 @@
                       <i class="iconfonticon-zonglan"></i>
                       总览
                     </li>
-                    <li>
-                      <span class="iconfont icon-zijinjilu"></span>
-                      <i class="iconfonticon-zijinjilu"></i>
-                      资金记录
-                    </li>
-                    <li>
-                      <span class="iconfont icon-zhangdan"></span>
-                      <i class="iconfonticon-zhangdan"></i>
-                      账单
-                    </li>
-
-                    <li>
+                    <li @click="router.push('/cashflow?id=3')">
                       <span class="iconfont icon-jiedailishi"></span>
                       <i class="iconfonticon-jiedailishi"></i>
                       借贷历史
                     </li>
-                    <li>
+                    <li @click="router.push('/cashflow?id=6')">
                       <span class="iconfont icon-duihuanlishi"></span>
                       <i class="iconfonticon-duihuanlishi"></i>
                       兑换历史
-                    </li>
-
-                    <li>
-                      <span class="iconfont icon-a-jiedailishi1"></span>
-                      <i class="iconfonticon-a-jiedailishi1"></i>
-                      返佣记录
-                    </li>
-
-                    <li>
-                      <span class="iconfont icon-dingdanliebiao"></span>
-                      <i class="iconfonticon-dingdanliebiao"></i>
-                      订单列表
                     </li>
                   </ul>
                 </div>

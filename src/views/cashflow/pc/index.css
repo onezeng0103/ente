@@ -529,7 +529,7 @@ td:hover {
   text-align: right;
 }
 
-.el-dialog__body .van-list .brief-li li ::v-deep .van-list__finished-text {
+.el-dialog__body .van-list .brief-li li .van-list__finished-text {
   display: none;
 }
 
@@ -2812,7 +2812,7 @@ td:hover {
   text-align: right;
 }
 
-.el-dialog__body .van-list .brief-li li ::v-deep .van-list__finished-text {
+.el-dialog__body .van-list .brief-li li .van-list__finished-text {
   display: none;
 }
 

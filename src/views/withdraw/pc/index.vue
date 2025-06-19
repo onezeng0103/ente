@@ -113,7 +113,7 @@
         <div class="Withdrawals-record">
           <p class="Withdrawals-record-title">
             <span>近期提现记录</span>
-            <span>查看历史记录</span>
+            <span @click="router.push('/cashflow?id=5')">查看历史记录</span>
           </p>
           <el-table
             :data="rowList"
@@ -182,7 +182,6 @@ const router = useRouter()
 const mainStore = useMainStore()
 const userStore = useUserStore()
 const { asset } = storeToRefs(userStore)
-const { userInfo } = storeToRefs(userStore)
 const formRef = useTemplateRef('formRef')
 const form = ref({
   coinType: '',
@@ -217,8 +216,7 @@ const coinList = computed(() => {
 const addressList = ref([])
 const saveCacheAddressFn = () => {
   getWithdrawAddressList().then((res) => {
-    if (res.data.length > 0) {
-    } else {
+    if (res.data.length == 0) {
       router.push('/withdrawDeposit')
     }
     addressList.value = res.data.map((item) => ({
@@ -310,13 +308,16 @@ const getWithdrawListFun = async () => {
 }
 onMounted(() => {
   list.value = coinList.value
-  // if (userInfo.value.detail?.userTardPwd == null) {
-  //   showToast(t('pleaseSetFundPassword'))
-  //   setTimeout(() => {
-  //     router.push('/fund-password')
-  //   }, 800)
-  //   return
-  // }
+  if (userInfo.value.detail?.userTardPwd == null) {
+    ElNotification({
+      title: '请先设置提现密码',
+      type: 'error'
+    })
+    setTimeout(() => {
+      router.push('/fund-password')
+    }, 800)
+    return
+  }
   saveCacheAddressFn()
   getWithdrawListFun()
 })

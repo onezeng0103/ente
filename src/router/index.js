@@ -106,12 +106,22 @@ const router = createRouter({
       path: '/loan',
       name: 'loan',
       component: () => import('../views/loan/index.vue')
+    },
+    {
+      path: '/withdrawDeposit',
+      name: 'withdrawDeposit',
+      component: () => import('../views/withdrawDeposit/index.vue')
+    },
+    {
+      path: '/forget',
+      name: 'forget',
+      component: () => import('../views/forget/index.vue')
+    },
+    {
+      path: '/setpwd',
+      name: 'setpwd',
+      component: () => import('../views/setpwd/index.vue')
     }
-    // {
-    //   path: '/forget',
-    //   name: 'forget',
-    //   component: () => import('../views/forget/index.vue')
-    // },
   ]
 })
 router.beforeEach(async (to, from, next) => {
