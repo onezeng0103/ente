@@ -1,0 +1,929 @@
+.inputColor {
+    --formBg: #f4f6f8;
+    --boxBg: #fff;
+    --elFormBg: #fcfdfd
+}
+
+.is_dark .inputColor {
+    --formBg: #000;
+    --boxBg: #161617;
+    --boxBor: none;
+    --boxBor: #ccc;
+    --elFormBg: #232325
+}
+
+.email {
+    height: 94vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background: var(--pwdBg);
+    background-size: cover
+}
+
+.email .el-icon-back {
+    z-index: 2
+}
+
+.email .both-sides {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    height: 100%
+}
+
+.email .both-sides img {
+    width: 100%
+}
+
+.email .box-left > img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    width: 90%
+}
+
+.email .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.email .box-right > img:first-of-type {
+    width: 90%
+}
+
+.email .box-right > img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+.email .el-icon-back {
+    font-size: .6rem;
+    cursor: pointer;
+    position: absolute;
+    left: .667rem;
+    top: .667rem;
+    color: var(--blackColor)
+}
+
+.email .email-box {
+    padding: .8rem .8rem;
+    border-radius: .267rem;
+    background-color: var(--elFormBg)
+}
+
+.email .email-box .email-title {
+    padding-bottom: .4rem;
+    color: var(--blackColor)
+}
+
+.email .email-box .el-form {
+    width: 100%
+}
+
+.email .email-box .el-form .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: .267rem
+}
+
+.email .email-box .el-form .code_box .el-button {
+    width: 1.88rem;
+    height: .64rem;
+    border-radius: .107rem;
+    padding: .133rem 0;
+    background: var(--blackColor);
+    color: var(--bg);
+    border: .013rem solid #fff;
+    margin-left: .133rem
+}
+
+.email .email-box .el-form .code_box .el-form-item {
+    width: 3.44rem;
+    height: .933rem
+}
+
+.email .email-box .el-form .code_box .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.email .email-box .el-form .el-form-item {
+    margin-bottom: .2rem
+}
+
+.email .email-box .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.email .email-box .el-form .el-form-item__label {
+    color: var(--blackColor);
+    white-space: nowrap
+}
+
+.email .email-box .el-form .el-form-item__content .el-input__inner {
+    height: .64rem;
+    background: #292929;
+    border-radius: .107rem;
+    border: .013rem solid #dbdbdb;
+    color: var(--blackColor)
+}
+
+.email .email-box .el-form .el-form-item__content .el-button {
+    height: .64rem;
+    width: 100%;
+    border-radius: .107rem;
+    border: none;
+    background: var(--blackColor);
+    color: var(--bg);
+    margin-top: .267rem
+}
+
+.country-selector {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%
+}
+
+.country-selector .el-select {
+    width: 100%;
+    height: 100%
+}
+
+.country-selector .el-select .el-input__prefix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.country-selector .el-select .el-input--medium {
+    height: 100%
+}
+
+.country-selector .el-select .el-input .el-input__inner {
+    height: 100%;
+    background-color: #fff;
+    border-radius: .107rem
+}
+
+.mobile-country-selector .el-select {
+    width: 100%
+}
+
+.mobile-country-selector .el-select .el-input__prefix {
+    padding-left: .133rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.mobile-country-selector .el-select .el-input__prefix .fi {
+    width: .667rem;
+    height: .667rem
+}
+
+.mobile-country-selector .el-select .el-input__suffix {
+    padding-right: .133rem
+}
+
+.mobile-country-selector .el-select .el-input__suffix .el-input__suffix-inner .el-select__caret {
+    font-size: .267rem
+}
+
+.mobile-country-selector .el-select .el-input .el-input__inner {
+    height: 1.093rem;
+    background-color: #fff;
+    border: .013rem solid #e0e0e0;
+    border-radius: .107rem;
+    padding-left: .933rem;
+    padding-right: .533rem;
+    font-size: .293rem;
+    font-weight: 400;
+    color: #818181
+}
+
+.inputColor {
+    --formBg: #f4f6f8;
+    --boxBg: #fff;
+    --elFormBg: #fcfdfd
+}
+
+.is_dark .inputColor {
+    --formBg: #000;
+    --boxBg: #161617;
+    --boxBor: none;
+    --boxBor: #ccc;
+    --elFormBg: #232325
+}
+
+.phoneNumber {
+    height: 94vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background: var(--pwdBg);
+    background-size: cover
+}
+
+.phoneNumber .el-icon-back {
+    z-index: 2
+}
+
+.phoneNumber .both-sides {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    height: 100%
+}
+
+.phoneNumber .both-sides img {
+    width: 100%
+}
+
+.phoneNumber .box-left > img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    width: 90%
+}
+
+.phoneNumber .box-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.phoneNumber .box-right > img:first-of-type {
+    width: 90%
+}
+
+.phoneNumber .box-right > img:last-of-type {
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+.phoneNumber .el-icon-back {
+    font-size: .6rem;
+    cursor: pointer;
+    position: absolute;
+    left: .667rem;
+    top: .667rem;
+    color: var(--blackColor)
+}
+
+.phoneNumber .phoneNumber-box {
+    padding: .8rem .8rem;
+    border-radius: .267rem;
+    background-color: var(--elFormBg)
+}
+
+.phoneNumber .phoneNumber-box .phoneNumber-title {
+    padding-bottom: .4rem;
+    color: var(--blackColor)
+}
+
+.phoneNumber .phoneNumber-box .el-form {
+    width: 100%
+}
+
+.phoneNumber .phoneNumber-box .el-form .phoneNumber {
+    width: 100%;
+    height: .8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background: none
+}
+
+.phoneNumber .phoneNumber-box .el-form .phoneNumber .country {
+    width: 35%;
+    height: .64rem;
+    margin-right: .067rem
+}
+
+.phoneNumber .phoneNumber-box .el-form .phoneNumber .el-input__inner {
+    height: .64rem;
+    background: #292929;
+    border-radius: .107rem;
+    border: .013rem solid #dbdbdb;
+    color: var(--blackColor)
+}
+
+.phoneNumber .phoneNumber-box .el-form .phoneNumber .el-form-item--medium {
+    width: 100%
+}
+
+.phoneNumber .phoneNumber-box .el-form .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-bottom: .267rem
+}
+
+.phoneNumber .phoneNumber-box .el-form .code_box .el-button {
+    width: 1.88rem;
+    height: .64rem;
+    border-radius: .107rem;
+    padding: .133rem 0;
+    background: var(--blackColor);
+    color: var(--bg);
+    border: .013rem solid #fff;
+    margin-left: .133rem
+}
+
+.phoneNumber .phoneNumber-box .el-form .code_box .el-form-item {
+    width: 3.44rem;
+    height: .933rem
+}
+
+.phoneNumber .phoneNumber-box .el-form .code_box .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.phoneNumber .phoneNumber-box .el-form .el-form-item {
+    margin-bottom: .2rem
+}
+
+.phoneNumber .phoneNumber-box .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.phoneNumber .phoneNumber-box .el-form .el-form-item__label {
+    color: var(--blackColor);
+    white-space: nowrap
+}
+
+.phoneNumber .phoneNumber-box .el-form .el-form-item__content .el-input__inner {
+    height: .64rem;
+    background: #292929;
+    border-radius: .107rem;
+    border: .013rem solid #dbdbdb;
+    color: var(--blackColor)
+}
+
+.phoneNumber .phoneNumber-box .el-form .el-form-item__content .el-button {
+    height: .64rem;
+    width: 100%;
+    border-radius: .107rem;
+    border: none;
+    background: var(--blackColor);
+    color: var(--bg);
+    margin-top: .267rem
+}
+
+.bar {
+    --title: #1d1d1d;
+    --bg: #fff
+}
+
+.is_dark .bar {
+    --title: #f7f7f7;
+    --bg: #161a1e
+}
+
+.van-nav-bar {
+    background-color: var(--bg);
+    margin-bottom: .667rem
+}
+
+.van-nav-bar:after {
+    border: none !important
+}
+
+.van-nav-bar .van-nav-bar__content {
+    height: 50px
+}
+
+.van-nav-bar .van-nav-bar__left, .van-nav-bar .van-nav-bar__title {
+    color: var(--title)
+}
+
+.van-nav-bar .van-nav-bar__left .iconfont {
+    font-size: .533rem;
+    vertical-align: middle
+}
+
+.van-nav-bar .van-nav-bar__right {
+    color: var(--title)
+}
+
+.email {
+    height: 94vh;
+    background-color: #fff
+}
+
+.email .step {
+    padding: 0 .4rem
+}
+
+.email .step .email-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.email .step .email-box img {
+    width: 3.733rem;
+    height: 3.733rem
+}
+
+.email .step .email-box p {
+    text-align: center;
+    font-size: .427rem;
+    font-weight: 400;
+    padding: .8rem .4rem 0 .4rem;
+    color: var(--text)
+}
+
+.email .step .email-list {
+    padding: .8rem 0
+}
+
+.email .step .email-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: .667rem
+}
+
+.email .step .email-list li span {
+    font-size: .48rem;
+    font-weight: 400;
+    color: var(--text)
+}
+
+.email .step .email-list li button {
+    min-width: 3.2rem;
+    height: .907rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .48rem;
+    font-weight: 400;
+    border: none;
+    border-radius: .187rem
+}
+
+.email .step .email-list li .to-bind {
+    background-color: #e5e5e5;
+    color: #383838
+}
+
+.email .step .email-list li .unbound {
+    background-color: #42b982;
+    color: #fff
+}
+
+.email .step .el-form .phoneNumber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.email .step .el-form .phoneNumber .country {
+    width: 40%;
+    margin-right: .133rem
+}
+
+.email .step .el-form .phoneNumber .el-form-item {
+    width: 60%
+}
+
+.email .step .el-form .el-form-item {
+    margin-bottom: .48rem
+}
+
+.email .step .el-form .el-form-item__label {
+    width: 100% !important;
+    text-align: left;
+    font-size: .293rem;
+    color: var(--text)
+}
+
+.email .step .el-form .el-form-item__content {
+    margin-left: 0 !important
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner {
+    height: 1.093rem;
+    width: 100%;
+    border-radius: .667rem;
+    border: .013rem solid #e0e0e0;
+    background-color: transparent;
+    color: #000;
+    font-size: .373rem
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner::-webkit-input-placeholder {
+    color: gray
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner::-moz-placeholder {
+    color: gray
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner:-ms-input-placeholder {
+    color: gray
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner::-ms-input-placeholder {
+    color: gray
+}
+
+.email .step .el-form .el-form-item__content .el-input__inner::placeholder {
+    color: gray
+}
+
+.email .step .el-form .el-form-item__content .el-input__icon {
+    display: none
+}
+
+.email .step .el-form .el-form-item__content .el-input__suffix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.email .step .el-form .el-form-item__content .icon-style {
+    font-size: .427rem
+}
+
+.email .step .el-form .el-form-item__content .el-button {
+    color: #fff;
+    width: 100%;
+    height: 1.093rem;
+    border-radius: .667rem;
+    font-size: .48rem;
+    font-weight: 400;
+    background: #000;
+    border: 0
+}
+
+.email .step .el-form .el-form-item__content .el-form-item__error {
+    position: static
+}
+
+.email .step .el-form .el-form-item__error {
+    font-size: .293rem;
+    font-weight: 400
+}
+
+.email .step .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.email .step .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: .4rem
+}
+
+.email .step .code_box .el-form-item__content {
+    height: 2.667rem
+}
+
+.email .step .code_box .el-form-item {
+    padding-right: .267rem;
+    margin-bottom: 0
+}
+
+.email .step .code_box .el-button {
+    font-size: .32rem;
+    width: 2.213rem;
+    height: 1.093rem;
+    border-radius: .667rem;
+    padding: .133rem 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    margin-top: .467rem
+}
+
+.email .step .code_box .el-form-item {
+    width: 6.173rem
+}
+
+.phoneNumber-bigbox {
+    height: 94vh;
+    background-color: #fff
+}
+
+.phoneNumber-bigbox .step {
+    padding: 0 .4rem
+}
+
+.phoneNumber-bigbox .step .phoneNumber-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.phoneNumber-bigbox .step .phoneNumber-box img {
+    width: 3.733rem;
+    height: 3.733rem
+}
+
+.phoneNumber-bigbox .step .phoneNumber-box p {
+    text-align: center;
+    font-size: .427rem;
+    font-weight: 400;
+    padding: .8rem .4rem 0 .4rem;
+    color: var(--text)
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list {
+    padding: .8rem 0
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: .667rem
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list li span {
+    font-size: .48rem;
+    font-weight: 400;
+    color: var(--text)
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list li button {
+    min-width: 3.2rem;
+    height: .907rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .48rem;
+    font-weight: 400;
+    border: none;
+    border-radius: .187rem
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list li .to-bind {
+    background-color: #e5e5e5;
+    color: #383838
+}
+
+.phoneNumber-bigbox .step .phoneNumber-list li .unbound {
+    background-color: #42b982;
+    color: #fff
+}
+
+.phoneNumber-bigbox .step .el-form .phoneNumber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.phoneNumber-bigbox .step .el-form .phoneNumber .country {
+    width: 40%;
+    height: 1.093rem;
+    margin-right: .133rem;
+    overflow: hidden
+}
+
+.phoneNumber-bigbox .step .el-form .phoneNumber .country .mobile-country-selector {
+    height: 1.093rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.phoneNumber-bigbox .step .el-form .phoneNumber .country .el-input__inner {
+    border-radius: .667rem
+}
+
+.phoneNumber-bigbox .step .el-form .phoneNumber .el-form-item {
+    width: 60%
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item {
+    margin-bottom: .48rem
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__label {
+    width: 100% !important;
+    text-align: left;
+    font-size: .293rem;
+    color: var(--text)
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content {
+    margin-left: 0 !important
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner {
+    height: 1.093rem;
+    width: 100%;
+    border-radius: .667rem;
+    border: .013rem solid #e0e0e0;
+    background-color: transparent;
+    color: #000;
+    font-size: .373rem
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner::-webkit-input-placeholder {
+    color: gray
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner::-moz-placeholder {
+    color: gray
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner:-ms-input-placeholder {
+    color: gray
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner::-ms-input-placeholder {
+    color: gray
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__inner::placeholder {
+    color: gray
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__icon {
+    display: none
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-input__suffix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .icon-style {
+    font-size: .427rem
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-button {
+    color: #fff;
+    width: 100%;
+    height: 1.093rem;
+    border-radius: .667rem;
+    font-size: .48rem;
+    font-weight: 400;
+    background: #000;
+    border: 0
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__content .el-form-item__error {
+    position: static
+}
+
+.phoneNumber-bigbox .step .el-form .el-form-item__error {
+    font-size: .293rem;
+    font-weight: 400
+}
+
+.phoneNumber-bigbox .step .el-form .is-error .el-input__inner {
+    border: .013rem solid #f56c6c
+}
+
+.phoneNumber-bigbox .step .code_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: .4rem
+}
+
+.phoneNumber-bigbox .step .code_box .el-form-item__content {
+    height: 2.667rem
+}
+
+.phoneNumber-bigbox .step .code_box .el-form-item {
+    padding-right: .267rem;
+    margin-bottom: 0
+}
+
+.phoneNumber-bigbox .step .code_box .el-button {
+    font-size: .32rem;
+    width: 2.213rem;
+    height: 1.093rem;
+    border-radius: .667rem;
+    padding: .133rem 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    margin-top: .467rem
+}
+
+.phoneNumber-bigbox .step .code_box .el-form-item {
+    width: 6.173rem
+}

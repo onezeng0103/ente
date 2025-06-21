@@ -168,17 +168,7 @@ onMounted(() => {
                     align-items: center;
                   "
                 >
-                  <div class="el-input el-input--large" style="flex: 1 1 0">
-                    <div class="el-input__wrapper">
-                      <input
-                        class="el-input__inner"
-                        style="color: #000000"
-                        v-model="formData.code"
-                        type="text"
-                        placeholder="请输入验证码"
-                      />
-                    </div>
-                  </div>
+                  <el-input v-model="formData.code" placeholder="请输入验证码"/>
                   <template v-if="flag">
                     <div
                       class="el-button"
